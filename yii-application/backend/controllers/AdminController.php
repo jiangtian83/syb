@@ -167,7 +167,7 @@ class AdminController extends Controller
                 $session=Yii::$app->session;
                 $session->set('msg',$count);
 
-                return $this->redirect(['index/index']);
+                return $this->redirect(['admin/index']);
             }else{
                 return $this->render('login',['model'=>$model]);
             }
