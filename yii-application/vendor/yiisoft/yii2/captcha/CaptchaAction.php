@@ -5,6 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
+/** resolve conclit */
 namespace yii\captcha;
 
 use Yii;
