@@ -11,8 +11,9 @@ use yii\web\session;
 use backend\models\UserForm;
 use yii\filters\AccessControl;
 
-class AdminController extends Controller{
-    public $enableCsrfValidation = false;//yii默认表单csrf验证，如果post不带改参数会报错！
+class AdminController extends Controller
+{
+    public $enableCsrfValidation = false;//yii默认表单csrf验证，如果post不改参数会报错！
     public $layout  = 'layout';
 
     /**

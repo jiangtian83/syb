@@ -1,6 +1,6 @@
 <?php
 use yii\helpers\Html;
-use app\assets\AppAsset;
+use backend\assets\AppAsset;
 use yii\widgets\ActiveForm;
 ?>
 <!DOCTYPE HTML>

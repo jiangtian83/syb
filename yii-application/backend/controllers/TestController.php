@@ -10,12 +10,16 @@
 
 namespace backend\controllers;
 
+use backend\models\YiiUser;
+use yii;
+
 
 use yii\web\Controller;
 
 class TestController extends Controller
 {
     public function actionIndex(){
-        return 8888;
+        Yii::$app->response->format = yii\web\Response::FORMAT_JSON;
+        return YiiUser::find()->all();
     }
 }
