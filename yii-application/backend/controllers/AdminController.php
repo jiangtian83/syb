@@ -157,10 +157,10 @@ class AdminController extends Controller
      */
 
     public function actionLogin(){
-        $model=new UserForm();
+        $model = new UserForm();
 
-//        if($model->load(Yii::$app->request->post())){
-//
+        if($model->load(Yii::$app->request->post())){
+
 //            if($model->login()){
 //                //查询未读消息
 ////                $count=Msg::find()->andwhere(['tid'=>Yii::$app->user->getId(),'status'=>0])->count();
@@ -171,7 +171,7 @@ class AdminController extends Controller
 //            }else{
 //                return $this->render('login',['model'=>$model]);
 //            }
-//        }
+        }
 
         return $this->render('login',['model'=>$model]);
     }
