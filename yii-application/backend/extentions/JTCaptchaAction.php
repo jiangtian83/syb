@@ -8,7 +8,7 @@
  * QQ: 284053253
  */
 
-namespace backend\extentds;
+namespace backend\extentions;
 
 use yii;
 use yii\web\Response;
