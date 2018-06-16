@@ -54,7 +54,10 @@ class AdminController extends Controller
 
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+                'fixedVerifyCode' => YII_ENV_DEV ? 'testme' : null,
+                'height' => 30,
+                'minLength' => 4,
+                'maxLength' => 8
             ],
         ];
     }
