@@ -2,9 +2,10 @@
 namespace backend\models;
 use Yii;
 use yii\base\Model;
-use app\models\YiiUser;
+use backend\models\YiiUser;
 
-class UserForm extends Model{
+class UserForm extends Model
+{
     public  $user;
     public  $pwd;
     public  $verifyCode;
