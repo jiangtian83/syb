@@ -1,15 +1,14 @@
 <?php
 namespace backend\models;
-use Yii;
+
 use yii\base\Model;
-use backend\models\YiiUser;
 
 class UserForm extends Model
 {
-    public  $user;
-    public  $pwd;
-    public  $verifyCode;
-    private $_user = false;
+    private  $user;
+    private  $pwd;
+    private  $verifyCode;
+    private  $_user = false;
 
     public function rules(){
 
@@ -30,7 +29,7 @@ class UserForm extends Model
         return [
             'user' => '账号',
             'pwd' => '密码',
-            'verifyCode'=>'验证',
+            'verifyCode'=>'验证码',
         ];
     }
 
@@ -41,7 +40,7 @@ class UserForm extends Model
     public function validatePassword($attribute,$params){
 
         if(!$this->hasErrors()){
-            $user = $this->getUser();
+            $user = $this->getUmodel();
             if(!$user){
                 $this->addError($attribute, '账号或密码不正确');
             }
@@ -52,9 +51,9 @@ class UserForm extends Model
     /**
      * @根据用户名密码查询用户
      */
-    public function getUser(){
-        if($this->_user===false){
-            $this->_user=YiiUser::find()->where(['user'=>$this->user,'pwd'=>md5($this->pwd)])->one();
+    public function getUmodel(){
+        if($this->_user === false){
+            $this->_user = YiiUser::find()->where(['user' => $this->user,'pwd' => md5($this->pwd)])->one();
         }
         return $this->_user;
     }
