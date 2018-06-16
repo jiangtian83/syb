@@ -44,7 +44,7 @@ use yii\widgets\ActiveForm;
 <div class="header">
 
     <div class="dl-title">
-        <img src="/assets/img/top.png" style="height: 42px;margin-top: 2px;">
+        后台管理系统
     </div>
 
     <div class="dl-log">
