@@ -26,7 +26,6 @@ use yii\widgets\ActiveForm;
 
             //每个轮询操作
             function updateMsg(){
-                return;
                 var msgnum=parseInt($("#msgnum").text());
                 //异步操作，发送请求，对比消息数变更
                 $.get('/admin/msg/pull',{msgnum:msgnum},function(data){
@@ -37,9 +36,6 @@ use yii\widgets\ActiveForm;
                 },'json');
 
             }
-
-
-
         })
     </script>
 </head>
@@ -48,7 +44,7 @@ use yii\widgets\ActiveForm;
 <div class="header">
 
     <div class="dl-title">
-        <!--<img src="/chinapost/Public/assets/img/top.png">-->
+        <img src="/assets/img/top.png">
     </div>
 
     <div class="dl-log">
