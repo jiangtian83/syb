@@ -95,16 +95,7 @@ use yii\widgets\ActiveForm;
     <div class="container">
         <div class="row">
             <?php if(count($cares)>0){
-                foreach ($cares as $v){ ?>
-                    <div class="col-md-2 col-sm-1 col-xs-3">
-                        <img title="<?=$v->user?>" class="img-circle tx" src="<?php if($v->thumb){
-                            echo $v->thumb;
-                        }else{
-                            echo '/avatar/photo.jpg'; } ?>" alt=""/>
-                        <p class="text-info nickname"><?=$v->nickname?></p>
-                        <p><a href="<?=Yii::$app->urlManager->createUrl(['admin/index/nofollow','id'=>$v->id])?>" class="btn btn-primary btn-sm btn-danger">取消关注</a></p>
-                    </div>
-                <?php }
+
             }else{?>
                <p>没有关注任何人！</p>
             <?php }?>
