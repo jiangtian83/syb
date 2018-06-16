@@ -58,7 +58,7 @@ class AdminController extends Controller
                 'height' => 30,
                 'minLength' => 4,
                 'maxLength' => 8,
-                'padding' => 5
+                'padding' => 0
             ],
         ];
     }
