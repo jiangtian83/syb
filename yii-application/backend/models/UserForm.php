@@ -5,9 +5,9 @@ use yii\base\Model;
 
 class UserForm extends Model
 {
-    private  $user;
-    private  $pwd;
-    private  $verifyCode;
+    public $user;
+    public $pwd;
+    public $verifyCode;
     private  $_user = false;
 
     public function rules(){
