@@ -34,7 +34,7 @@ use yii\captcha\Captcha;
             <?=$form->field($model,'user')->textInput(["placeholder"=>"账号"]); ?>
             <?=$form->field($model,'pwd')->passwordInput(['placeholder'=>'密码']); ?>
             <?=$form->field($model,'verifyCode')->widget(Captcha::className(),['captchaAction'=>Yii::$app->urlManager->createUrl('/admin/captcha'),
-                'template'=>'<div class="row"><div class="col-md-3 col-xs-4 mr20">{image}</div><div class="col-md-6 col-xs-6">{input}</div></div>'
+                'template'=>'<div class="row"><div class="col-md-3 col-xs-4 mr20">{input}</div><div class="col-md-9 col-xs-8">{image}</div></div>'
             ])?>
             <?=  Html::submitButton('登录', ['class'=>'btn btn-primary btn-lg btn-block','name' =>'submit-button']) ?>
             <?php ActiveForm::end();?>
