@@ -15,9 +15,9 @@ class UserForm extends Model
 
         return [
             [['user', 'pwd'], 'required','message'=>'{attribute}不能为空！'],
-            [['user'], 'string', 'max' => 50,'tooLong'=>'{attribute}长度必需在100以内'],
-            [['pwd'], 'string', 'max' => 32,'tooLong'=>'{attribute}长度必需在32以内'],
-            [['pwd'],'validatePassword','message'=>'账号或密码不正确！'],
+            ['user', 'string', 'max' => 50,'tooLong'=>'{attribute}长度必需在100以内'],
+            ['pwd', 'string', 'max' => 32,'tooLong'=>'{attribute}长度必需在32以内'],
+            ['pwd','validatePassword','message'=>'账号或密码不正确！'],
         ];
     }
 
