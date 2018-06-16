@@ -11,7 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'defaultRoute'=>'backend/index/index',//默认路由，控制器+方法
+    'defaultRoute'=>'admin/index',//默认路由，控制器+方法
     'modules' => [],
     'components' => [
         'request' => [
