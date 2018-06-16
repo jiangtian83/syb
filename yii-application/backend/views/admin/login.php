@@ -44,8 +44,7 @@ use yii\captcha\Captcha;
         <div class="col-md-4 sm col-sm-1"></div>
     </div>
 </div>
-<?php
-$js = <<<JS
+<script>
     //更改或者重新加载验证码
     function changeVerifyCode() {
         $.ajax({
@@ -57,10 +56,7 @@ $js = <<<JS
             }
         });
     }
-JS;
-
-$this->registerJs($js);
-?>
+</script>
 </body>
 </html>
 
