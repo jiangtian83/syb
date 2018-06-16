@@ -82,8 +82,6 @@ class AdminController extends Controller
 
         //我的粉丝
         $follow=Follow::find()->where(array("fid"=>$uid))->all();
-        //$follow=Follow::findBySql("select uid from {{%follow}} where fid=".Yii::$app->user->getId())->all();
-        //echo '<pre/>';print_r($follow);
         $ids=array();
         foreach($follow as $v){
             array_push($ids,$v->uid);
@@ -91,7 +89,6 @@ class AdminController extends Controller
 
         //获取我的粉丝信息
         $fensi=YiiUser::findAll($ids);
-        //echo '<pre/>';print_r($fensi);
 
         //获取我关注的人【我的好友】
         $careids=Follow::find()->where(["uid"=>$uid])->all();
@@ -103,7 +100,6 @@ class AdminController extends Controller
 
         //获取我没有关注的用户【加关注的人】
          array_push($cids,$uid);//将我的id也加入到排除列表
-        //$users=YiiUser::find()->where(['in','id',$ids])->all();//id在一个数组范围内
         $users=YiiUser::find()->where(['not in','id',$cids])->all();
 
         return $this->render('users',array('users'=>$users,'fensi'=>$fensi,'cares'=>$cares,'cids'=>$cids));
