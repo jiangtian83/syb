@@ -8,7 +8,40 @@ use yii\widgets\ActiveForm;
 <head>
     <title>后台管理系统</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <?=Html::cssFile('@web/assets/css/dpl-min.css')?>
+    <?=Html::cssFile('@web/assets/css/bui-min.css')?>
+    <?=Html::cssFile('@web/assets/css/main-min.css')?>
+    <?=Html::cssFile('@web/css/site.css')?>
+    <?=Html::jsFile('@web/assets/js/jquery-1.8.1.min.js')?>
+    <?=Html::jsFile('@web/assets/js/bui-min.js')?>
+    <?=Html::jsFile('@web/assets/js/common/main-min.js')?>
+    <?=Html::jsFile('@web/assets/js/config-min.js')?>
+    <script>
+        $(function(){
+            ajaxPull();
+            //轮询，实时更新消息数,10秒更新一次
+            function ajaxPull(){
+                setInterval(updateMsg,10000);
+            }
 
+            //每个轮询操作
+            function updateMsg(){
+                return;
+                var msgnum=parseInt($("#msgnum").text());
+                //异步操作，发送请求，对比消息数变更
+                $.get('/admin/msg/pull',{msgnum:msgnum},function(data){
+                    if(data.status==1){
+                        //更新消息提示
+                        $("#msgnum").text(data.msgnum);
+                    }
+                },'json');
+
+            }
+
+
+
+        })
+    </script>
 </head>
 <body>
 
