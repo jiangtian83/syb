@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
-use backend\extentds\JTCaptchaAction;
+use backend\extentions\JTCaptchaAction;
 
 ?>
 <!DOCTYPE HTML>
