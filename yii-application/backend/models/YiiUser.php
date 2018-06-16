@@ -81,7 +81,11 @@ class YiiUser extends ActiveRecord implements IdentityInterface
         return $this->pwd === $password;
     }
 
-
-
-
+    /**
+     * 实现静态函数
+     * @return static
+     */
+    public static function instance(){
+        return new static();
+    }
 }
