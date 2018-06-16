@@ -53,7 +53,7 @@ class AdminController extends Controller
         return [
 
             'captcha' => [
-                'class' => 'backend\extentds\JTCaptchaAction',
+                'class' => 'backend\extentions\JTCaptchaAction',
                 'fixedVerifyCode' => YII_ENV_DEV ? 'testme' : null,
                 'height' => 30,
                 'minLength' => 4,
