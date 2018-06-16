@@ -17,7 +17,7 @@ class Follow extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return '{{%follow}}';
+        return '{{%yii_follow}}';
     }
 
     /**
