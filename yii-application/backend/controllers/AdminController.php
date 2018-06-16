@@ -66,7 +66,7 @@ class AdminController extends Controller
     {
         // fsaf
 
-        return $this->render('test');
+        return $this->render('index');
     }
 
 
