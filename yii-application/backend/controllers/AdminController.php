@@ -163,9 +163,9 @@ class AdminController extends Controller
         if($model->load($data = Yii::$app->request->post())){
             if($model->login()){
                 //查询未读消息
-//                $count=Msg::find()->andwhere(['tid'=>Yii::$app->user->getId(),'status'=>0])->count();
-//                $session=Yii::$app->session;
-//                $session->set('msg',$count);
+                $count=Msg::find()->andwhere(['tid'=>Yii::$app->user->getId(),'status'=>0])->count();
+                $session=Yii::$app->session;
+                $session->set('msg',$count);
 
                 return $this->redirect(['admin/index']);
             }else{
