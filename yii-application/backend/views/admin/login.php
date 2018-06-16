@@ -29,7 +29,7 @@ use yii\captcha\Captcha;
                 'id'=>'login',
                 'action' => '',
                 'enableAjaxValidation' => false,
-                'options'=>['enctype'=>'multipart/form-data', 'style' => 'margin-top: 20px;']
+                'options'=>['enctype'=>'multipart/form-data']
             ]);?>
 
             <?=$form->field($model,'user')->textInput(["placeholder"=>"账号"]); ?>
