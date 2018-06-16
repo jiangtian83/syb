@@ -94,7 +94,7 @@ use yii\widgets\ActiveForm;
 
     <div class="container">
         <div class="row">
-            <?php if(count($cares)>0):?>
+            <?php if(count($cares)>0){?>
                 <?php foreach ($cares as $v){ ?>
                     <div class="col-md-2 col-sm-1 col-xs-3">
                         <img title="<?=$v->user?>" class="img-circle tx" src="<?php if($v->thumb){?><?=$v->thumb?><?php }else{?>/avatar/photo.jpg<?php } ?>" alt=""/>
@@ -102,9 +102,9 @@ use yii\widgets\ActiveForm;
                         <p><a href="<?=Yii::$app->urlManager->createUrl(['admin/index/nofollow','id'=>$v->id])?>" class="btn btn-primary btn-sm btn-danger">取消关注</a></p>
                     </div>
                 <?php }?>
-            <?else:?>
+            <?php }else{?>
                <p>没有关注任何人！</p>
-            <?endif?>
+            <?php }?>
         </div>
     </div>
     
