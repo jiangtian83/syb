@@ -26,6 +26,7 @@ use yii\widgets\ActiveForm;
 
             //每个轮询操作
              function updateMsg(){
+                 return;
                 var msgnum=parseInt($("#msgnum").text());
                 //异步操作，发送请求，对比消息数变更
                  $.get('/admin/msg/pull',{msgnum:msgnum},function(data){
@@ -50,7 +51,7 @@ use yii\widgets\ActiveForm;
         <!--<img src="/chinapost/Public/assets/img/top.png">-->
     </div>
 
-    <div class="dl-log">欢迎您，<span class="dl-log-user" id="<?=Yii::$app->user->getId()?>"><?=Yii::$app->user->identity->nickname?>(<?=Yii::$app->user->identity->user?>)</span>   <span class="glyphicon glyphicon-envelope"></span>  <span class="badge" id="msgnum"><?php if(Yii::$app->session->has('msg')):?> <?=Yii::$app->session->get('msg')?><?else:?>0<?endif?></span>  <a href="<?=Yii::$app->urlManager->createUrl(['admin/index/logout'])?>" title="退出系统" class="dl-log-quit">[退出]</a>
+    <div class="dl-log">欢迎您，<span class="dl-log-user" id="<?=Yii::$app->user->getId()?>"><?=Yii::$app->user->identity->nickname?>(<?=Yii::$app->user->identity->username?>)</span>   <span class="glyphicon glyphicon-envelope"></span>  <span class="badge" id="msgnum"><?php if(Yii::$app->session->has('msg')):?> <?=Yii::$app->session->get('msg')?><?else:?>0<?endif?></span>  <a href="<?=Yii::$app->urlManager->createUrl(['admin/logout'])?>" title="退出系统" class="dl-log-quit">[退出]</a>
     </div>
 </div>
 <div class="content">
@@ -68,11 +69,11 @@ use yii\widgets\ActiveForm;
 
 
 <script>
-    var test="<?= Yii::$app->urlManager->createUrl('admin/index/users')?>";
-    var thumb="<?= Yii::$app->urlManager->createUrl('admin/index/thumb')?>";
-    var sendmsg="<?= Yii::$app->urlManager->createUrl('admin/msg/sendmsg')?>";
-    var msg="<?= Yii::$app->urlManager->createUrl('admin/msg/msg')?>";
-    var mysend="<?= Yii::$app->urlManager->createUrl('admin/msg/mysend')?>";
+    var test="<?= Yii::$app->urlManager->createUrl('admin/users')?>";
+    var thumb="<?= Yii::$app->urlManager->createUrl('admin/thumb')?>";
+    var sendmsg="<?= Yii::$app->urlManager->createUrl('admin/sendmsg')?>";
+    var msg="<?= Yii::$app->urlManager->createUrl('admin/msg')?>";
+    var mysend="<?= Yii::$app->urlManager->createUrl('admin/mysend')?>";
 
     BUI.use('common/main',function(){
         var config = [
