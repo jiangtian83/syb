@@ -11,6 +11,7 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
+    'defaultRoute'=>'admin/index/index',//默认路由，控制器+方法
     'modules' => [],
     'components' => [
         'request' => [
@@ -41,7 +42,9 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-
+                "<module:\w+>/<controller:\w+>/<action:\w+>/<id:\d+>"=>"<module>/<controller>/<action>",
+                "<controller:\w+>/<action:\w+>/<id:\d+>"=>"<controller>/<action>",
+                "<controller:\w+>/<action:\w+>"=>"<controller>/<action>",
             ],
         ],
     ],
