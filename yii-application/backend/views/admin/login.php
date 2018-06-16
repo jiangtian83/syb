@@ -35,8 +35,8 @@ use yii\captcha\Captcha;
             <?=$form->field($model,'user')->textInput(["placeholder"=>"账号"]); ?>
             <?=$form->field($model,'pwd')->passwordInput(['placeholder'=>'密码']); ?>
             <?=$form->field($model,'verifyCode')->widget(Captcha::className(),['captchaAction'=>Yii::$app->urlManager->createUrl('admin/captcha'),
-                'imageOptions' => ['style' => 'cursor:pointer','alt'=>'点击换图','title'=>'点击换图'],
-                'template'=>'<div class="row"><div class="col-md-8 col-xs-6">{input}</div><div class="col-md-4 col-xs-6">{image}</div></div>'
+                'imageOptions' => ['style' => 'cursor:pointer','alt'=>'点击换图','title'=>'点击换图', 'id' => 'imgVerifyCode'],
+                'template'=>'<div class="row"><div class="col-md-8 col-xs-6">{input}</div><div class="col-md-4 col-xs-6" onclick="changeVerifyCode();">{image}</div></div>'
             ])?>
             <?=  Html::submitButton('登录', ['class'=>'btn btn-primary btn-lg btn-block','name' =>'submit-button']) ?>
             <?php ActiveForm::end();?>
@@ -44,6 +44,22 @@ use yii\captcha\Captcha;
         <div class="col-md-4 sm col-sm-1"></div>
     </div>
 </div>
+<?php
+$js = <<<JS
+    //更改或者重新加载验证码
+    function changeVerifyCode() {
+        $.ajax({
+            url: "/admin/captcha?refresh",
+            dataType: 'json',
+            cache: false,
+            success: function(data) {
+                $('#imgVerifyCode').attr('src', data['url']);
+            }
+        });
+    }
+JS;
+
+?>
 </body>
 </html>
 

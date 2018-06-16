@@ -58,7 +58,7 @@ class AdminController extends Controller
                 'height' => 30,
                 'minLength' => 4,
                 'maxLength' => 8,
-                'padding' => 0
+                'padding' => 1
             ],
         ];
     }
@@ -69,8 +69,6 @@ class AdminController extends Controller
      */
     public function actionIndex()
     {
-        // fsaf
-
         return $this->render('index');
     }
 

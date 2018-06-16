@@ -18,6 +18,7 @@ class UserForm extends Model
             ['user', 'string', 'max' => 50,'tooLong'=>'{attribute}长度必需在100以内'],
             ['pwd', 'string', 'max' => 32,'tooLong'=>'{attribute}长度必需在32以内'],
             ['pwd','validatePassword','message'=>'账号或密码不正确！'],
+            ['verifyCode', 'required'],
             ['verifyCode', 'captcha', 'captchaAction' => '/admin/captcha', 'message' => '验证码不正确！']
         ];
     }
