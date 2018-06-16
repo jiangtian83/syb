@@ -59,6 +59,7 @@ $js = <<<JS
     }
 JS;
 
+$this->registerJs($js);
 ?>
 </body>
 </html>
