@@ -58,7 +58,7 @@ use yii\widgets\ActiveForm;
             <?php if(count($users)>0):?>
                 <?php foreach ($users as $v): ?>
                     <div class="col-md-2 col-sm-1 col-xs-3">
-                        <img title="<?=$v->user?>" class="img-circle tx" src="<?php if($v->thumb):?><?=$v->thumb?><?else:?>/avatar/photo.jpg<?endif?>" alt=""/>
+                        <img title="<?=$v->user?>" class="img-circle tx" src="<?php if($v->thumb){?><?=$v->thumb?><?php }else{?>/avatar/photo.jpg<?php } ?>" alt=""/>
                         <p class="text-info nickname"><?=$v->nickname?></p>
                         <p><a href="<?=Yii::$app->urlManager->createUrl(['admin/index/follow','id'=>$v->id])?>" class="btn btn-primary btn-sm btn-success">添加关注</a></p>
                     </div>
@@ -73,7 +73,7 @@ use yii\widgets\ActiveForm;
             <?php if(count($fensi)>0):?>
                 <?php foreach ($fensi as $v): ?>
                     <div class="col-md-2 col-sm-1 col-xs-3">
-                        <img title="<?=$v->user?>" class="img-circle tx" src="<?php if($v->thumb):?><?=$v->thumb?><?else:?>/avatar/photo.jpg<?endif?>" alt=""/>
+                        <img title="<?=$v->user?>" class="img-circle tx" src="<?php if($v->thumb){?><?=$v->thumb?><?php }else{?>/avatar/photo.jpg<?php }?>" alt=""/>
 
 
                             <?php if(in_array($v->id,$cids )):?>
