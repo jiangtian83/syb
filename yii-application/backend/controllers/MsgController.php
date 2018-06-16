@@ -7,11 +7,11 @@
  */
 
 namespace backend\controllers;
-use app\models\Msg;
+use backend\models\Msg;
 use Yii;
 use yii\web\Controller;
-use app\models\Follow;
-use app\models\YiiUser;
+use backend\models\Follow;
+use backend\models\YiiUser;
 use yii\data\Pagination;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;

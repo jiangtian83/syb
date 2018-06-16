@@ -1,13 +1,14 @@
 <?php
 
 namespace backend\controllers;
-use app\models\Follow;
-use app\models\Msg;
+
+use backend\models\Follow;
+use backend\models\Msg;
 use Yii;
 use yii\web\Controller;
-use app\models\YiiUser;
+use backend\models\YiiUser;
 use yii\web\session;
-use app\models\UserForm;
+use backend\models\UserForm;
 use yii\filters\AccessControl;
 
 class AdminController extends Controller{
