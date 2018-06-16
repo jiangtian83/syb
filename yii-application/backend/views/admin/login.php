@@ -15,7 +15,7 @@ use yii\captcha\Captcha;
 <body>
 <style>
     body{background: #009A61}
-    .login{background: #fff;padding: 3em;margin-top: 10em;border-radius: 0.5em;}
+    .login{background: #fff;padding: 1em 3em 3em 3em;;margin-top: 10em;border-radius: 0.5em;}
     label{display: none;}
     .mr20{margin-right:20px;}
     h3{font-family: "microsoft yahei", "黑体"}
