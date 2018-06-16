@@ -57,7 +57,7 @@ class AdminController extends Controller
                 //'fixedVerifyCode' => YII_ENV_DEV ? 'testme' : null,
                 'height' => 30,
                 'minLength' => 4,
-                'maxLength' => 8,
+                'maxLength' => 6,
                 'padding' => 1
             ],
         ];
