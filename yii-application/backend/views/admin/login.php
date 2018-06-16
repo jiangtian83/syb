@@ -44,6 +44,7 @@ use yii\captcha\Captcha;
         <div class="col-md-4 sm col-sm-1"></div>
     </div>
 </div>
+<script src="/assets/js/jquery-1.8.1.min.js"></script>
 <script>
     //更改或者重新加载验证码
     function changeVerifyCode() {
