@@ -161,18 +161,16 @@ class AdminController extends Controller
         $model = new UserForm();
 
         if($model->load($data = Yii::$app->request->post())){
-            Yii::$app->response->format = Response::FORMAT_JSON;
-            return $data;
-//            if($model->login()){
-//                //查询未读消息
-////                $count=Msg::find()->andwhere(['tid'=>Yii::$app->user->getId(),'status'=>0])->count();
-////                $session=Yii::$app->session;
-////                $session->set('msg',$count);
-//
-//                return $this->redirect(['admin/index']);
-//            }else{
-//                return $this->render('login',['model'=>$model]);
-//            }
+            if($model->login()){
+                //查询未读消息
+//                $count=Msg::find()->andwhere(['tid'=>Yii::$app->user->getId(),'status'=>0])->count();
+//                $session=Yii::$app->session;
+//                $session->set('msg',$count);
+
+                return $this->redirect(['admin/index']);
+            }else{
+                return $this->render('login',['model'=>$model]);
+            }
         }
 
         return $this->render('login',['model'=>$model]);
