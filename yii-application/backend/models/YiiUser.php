@@ -85,7 +85,7 @@ class YiiUser extends ActiveRecord implements IdentityInterface
      * 实现静态函数
      * @return static
      */
-    public static function instance(){
+    public static function instance($refresh = false){
         return new static();
     }
 }
