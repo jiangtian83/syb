@@ -56,7 +56,6 @@ class AdminController extends Controller
                 'class' => 'backend\extensions\JTCaptchaAction',
                 //'fixedVerifyCode' => YII_ENV_DEV ? 'testme' : null,
                 'height' => 30,
-                'width' => '100%',
                 'minLength' => 4,
                 'maxLength' => 6,
                 'padding' => 1
