@@ -161,6 +161,8 @@ class AdminController extends Controller
         $model = new UserForm();
 
         if($model->load($data = Yii::$app->request->post())){
+            Yii::$app->response->format = Response::FORMAT_JSON;
+            return $data;
 //            if($model->login()){
 //                //查询未读消息
 ////                $count=Msg::find()->andwhere(['tid'=>Yii::$app->user->getId(),'status'=>0])->count();
