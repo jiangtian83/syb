@@ -23,7 +23,7 @@ class UserForm extends Model
 
 
     /**
-     * @
+     * @return array
      */
     public function attributeLabels()
     {
@@ -35,7 +35,8 @@ class UserForm extends Model
     }
 
     /**
-     * @
+     * @param $attribute
+     * @param $params
      */
     public function validatePassword($attribute,$params){
 
@@ -64,17 +65,12 @@ class UserForm extends Model
      */
     public function login(){
         if($this->validate()){
-            return Yii::$app->user->login($this->getUser(),3600*24*1);
+            return true;
+            //return Yii::$app->user->login($this->getUser(),3600*24*1);
         }else{
             return false;
         }
 
     }
-
-
-
-
-
-
 }
 ?>
