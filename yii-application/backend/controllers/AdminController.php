@@ -172,7 +172,7 @@ class AdminController extends Controller
 //                return $this->redirect(['admin/index']);
 //            }else{
 //                return $this->render('login',['model'=>$model]);
-            }
+//            }
         }
 
         return $this->render('login',['model'=>$model]);
