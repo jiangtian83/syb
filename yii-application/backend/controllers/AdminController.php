@@ -64,11 +64,11 @@ class AdminController extends Controller
      */
     public function actionIndex()
     {
-        //echo Yii::$app->user->getId().'<br/>';获取用户id
-        //echo Yii::$app->user->identity->getUser();//获取用户名
+        echo Yii::$app->user->getId().'<br/>';获取用户id
+        echo Yii::$app->user->identity->getUser();//获取用户名
 
-       // echo Yii::$app->basePath;//获取应用根目录
-        return $this->render('index');
+        echo Yii::$app->basePath;//获取应用根目录
+        //return $this->render('index');
     }
 
 
