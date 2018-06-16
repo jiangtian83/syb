@@ -18,8 +18,8 @@ use yii\widgets\ActiveForm;
         <!--<img src="/chinapost/Public/assets/img/top.png">-->
     </div>
 
-    <div class="dl-log">欢迎您，<span class="dl-log-user" id="<?=Yii::$app->user->id?>">(<?=Yii::$app->user->identity->username?>)</span>   <span class="glyphicon glyphicon-envelope"></span>  <span class="badge" id="msgnum"><?php if(Yii::$app->session->has('msg')):?> <?=Yii::$app->session->get('msg')?><?else:?>0<?endif?></span>  <a href="<?=Yii::$app->urlManager->createUrl(['admin/logout'])?>" title="退出系统" class="dl-log-quit">[退出]</a>
-    </div>
+<!--    <div class="dl-log">欢迎您，<span class="dl-log-user" id="--><?//=Yii::$app->user->id?><!--">(--><?//=Yii::$app->user->identity->username?><!--)</span>   <span class="glyphicon glyphicon-envelope"></span>  <span class="badge" id="msgnum">--><?php //if(Yii::$app->session->has('msg')):?><!-- --><?//=Yii::$app->session->get('msg')?><!----><?//else:?><!--0--><?//endif?><!--</span>  <a href="--><?//=Yii::$app->urlManager->createUrl(['admin/logout'])?><!--" title="退出系统" class="dl-log-quit">[退出]</a>-->
+<!--    </div>-->
 </div>
 
 </body>
