@@ -4,7 +4,7 @@ use backend\assets\AppAsset;
 use yii\widgets\ActiveForm;
 ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -28,7 +28,6 @@ use yii\widgets\ActiveForm;
             //消息消失动画
             function fadeInfo(){
                 setTimeout(function(){
-                    //alert('消息框即将消失！');
                     $(".text").fadeOut(800);
                 },1000)
             }
@@ -39,54 +38,54 @@ use yii\widgets\ActiveForm;
 <body>
 <div class="main">
 
-    <?php if(Yii::$app->session->hasFlash('success')):?>
+    <?php if(Yii::$app->session->hasFlash('success')){?>
     <div class=" text-info text-success text">
         <b><?=Yii::$app->session->getFlash('success')?></b>
     </div>
-    <?endif?>
+    <?php }?>
 
 
-    <?php if(Yii::$app->session->hasFlash('error')):?>
+    <?php if(Yii::$app->session->hasFlash('error')){?>
         <div class=" text-info text-danger text">
             <b><?=Yii::$app->session->getFlash('error')?></b>
         </div>
-    <?endif?>
+    <?php }?>
 
    <h1>推荐朋友</h1>
     <div class="container">
         <div class="row">
-            <?php if(count($users)>0):?>
-                <?php foreach ($users as $v): ?>
+            <?php if(count($users)>0){?>
+                <?php foreach ($users as $v){ ?>
                     <div class="col-md-2 col-sm-1 col-xs-3">
                         <img title="<?=$v->user?>" class="img-circle tx" src="<?php if($v->thumb){?><?=$v->thumb?><?php }else{?>/avatar/photo.jpg<?php } ?>" alt=""/>
                         <p class="text-info nickname"><?=$v->nickname?></p>
                         <p><a href="<?=Yii::$app->urlManager->createUrl(['admin/index/follow','id'=>$v->id])?>" class="btn btn-primary btn-sm btn-success">添加关注</a></p>
                     </div>
-                <? endforeach?>
-            <?endif?>
+                <?php }?>
+            <?php }?>
         </div>
     </div>
 
     <p><h2>我的粉丝</h2></p>
     <div class="container">
         <div class="row">
-            <?php if(count($fensi)>0):?>
-                <?php foreach ($fensi as $v): ?>
+            <?php if(count($fensi)>0){?>
+                <?php foreach ($fensi as $v){ ?>
                     <div class="col-md-2 col-sm-1 col-xs-3">
                         <img title="<?=$v->user?>" class="img-circle tx" src="<?php if($v->thumb){?><?=$v->thumb?><?php }else{?>/avatar/photo.jpg<?php }?>" alt=""/>
 
 
-                            <?php if(in_array($v->id,$cids )):?>
+                            <?php if(in_array($v->id,$cids )){?>
                                 <p class="text-success nickname" href="javascript:void(0)"><span title="我们互相关注了！" class="glyphicon glyphicon-ok-circle"></span> <?=$v->nickname?></p>
-                            <?else:?>
+                            <?php }else{?>
                                 <p class="text-danger nickname"  href="javascript:void(0)" ><span title="还未关注他哦！" class="glyphicon glyphicon-remove-circle"></span> <?=$v->nickname?></p>
-                            <?endif?>
+                            <?php }?>
 
                     </div>
-                <? endforeach?>
-             <?else:?>
+                <?php }?>
+             <?php }else{?>
                 <p>好可怜，一个粉丝都没有！</p>
-            <?endif?>
+            <?php }?>
         </div>
     </div>
 
@@ -95,7 +94,16 @@ use yii\widgets\ActiveForm;
     <div class="container">
         <div class="row">
             <?php if(count($cares)>0){
-
+                foreach ($cares as $v){ ?>
+                    <div class="col-md-2 col-sm-1 col-xs-3">
+                        <img title="<?=$v->user?>" class="img-circle tx" src="<?php if($v->thumb){
+                            echo $v->thumb;
+                        }else{
+                            echo '/avatar/photo.jpg'; } ?>" alt=""/>
+                        <p class="text-info nickname"><?=$v->nickname?></p>
+                        <p><a href="<?=Yii::$app->urlManager->createUrl(['admin/index/nofollow','id'=>$v->id])?>" class="btn btn-primary btn-sm btn-danger">取消关注</a></p>
+                    </div>
+                <?php }
             }else{
                echo '<p>没有关注任何人！</p>';
             }?>
