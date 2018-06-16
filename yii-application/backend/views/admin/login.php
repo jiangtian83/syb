@@ -27,6 +27,7 @@ use yii\captcha\Captcha;
             <h3><p><span class='glyphicon glyphicon-user'></span>&nbsp;欢迎使用用户中心</p></h3>
             <?php $form=ActiveForm::begin([
                 'id'=>'login',
+                'action' => '',
                 'enableAjaxValidation' => false,
                 'options'=>['enctype'=>'multipart/form-data']
             ]);?>
