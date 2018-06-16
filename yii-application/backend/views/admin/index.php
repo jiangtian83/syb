@@ -29,7 +29,7 @@ use yii\widgets\ActiveForm;
                 var msgnum=parseInt($("#msgnum").text());
                 //异步操作，发送请求，对比消息数变更
                 $.get('/admin/msg/pull',{msgnum:msgnum},function(data){
-                    if(data.status==1){
+                    if(data.status == 1){
                         //更新消息提示
                         $("#msgnum").text(data.msgnum);
                     }
@@ -44,7 +44,7 @@ use yii\widgets\ActiveForm;
 <div class="header">
 
     <div class="dl-title">
-        <img src="/assets/img/top.png">
+        <img src="/assets/img/top.png" style="height: 30px;">
     </div>
 
     <div class="dl-log">
