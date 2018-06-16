@@ -96,9 +96,9 @@ use yii\widgets\ActiveForm;
         <div class="row">
             <?php if(count($cares)>0){
 
-            }else{?>
-               <p>没有关注任何人！</p>
-            <?php }?>
+            }else{
+               echo '<p>没有关注任何人！</p>';
+            }?>
         </div>
     </div>
     
