@@ -30,7 +30,10 @@ AppAsset::register($this);
 <div class="wrap">
     <div class="container">
         <?= Breadcrumbs::widget([
-            'homeLink' => ['/yii-cate/index'],
+            'homeLink' => [
+                'label' => Yii::t('yii', '栏目管理主页'),
+                'url' => '/yii-cate/index',
+            ],
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
