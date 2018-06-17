@@ -12,8 +12,6 @@ $this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => "##"];
 ?>
 <div class="yii-cate-update">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
