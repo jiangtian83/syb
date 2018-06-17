@@ -10,10 +10,10 @@ use yii\bootstrap\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="yii-cate-form">
+<div class="yii-cate-form col-md-4 col-xs-6 col-lg-2 col-sm-12">
 
     <?php $form = ActiveForm::begin([
-        'options' => ['class' => 'form-horizontal', 'style' => 'width: 50%'],
+        'options' => ['class' => 'form-horizontal'],
         'fieldConfig' => [
             'template' => "{label}\n{beginWrapper}\n{input}\n{hint}\n{error}\n{endWrapper}",
             'horizontalCssClasses' => [
@@ -60,3 +60,4 @@ use yii\bootstrap\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+<div class="col-md-8 col-xs-6 col-lg-10"></div>
