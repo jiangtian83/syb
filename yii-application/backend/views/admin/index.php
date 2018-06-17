@@ -78,11 +78,11 @@ use yii\widgets\ActiveForm;
 
     BUI.use('common/main',function(){
         var config = [
-            {id:'1',menu:[
+            {id:'1',homePage : '9',menu:[{text:'业务管理',items:[{id:'9',text:'查询业务',href:test}]}]}
+            {id:'2',menu:[
                   {text:'系统管理',items:[{id:'11',text:'朋友圈',href:test},{id:'12',text:'头像管理',href:thumb}]},
                   {text:'消息管理',items:[{id:'22',text:'我的消息',href:msg},{id:'23',text:'我发送的',href:mysend},{id:'24',text:'发送信息',href:sendmsg}]}
                 ]},
-            {id:'7',homePage : '9',menu:[{text:'业务管理',items:[{id:'9',text:'查询业务',href:test}]}]}
         ];
         new PageUtil.MainPage({
             modulesConfig : config
