@@ -36,7 +36,7 @@ class YiiCate extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['catename', 'created_at', 'updated_at'], 'required'],
+            [['catename'], 'required'],
             [['pid', 'deep', 'type', 'views', 'created_at', 'updated_at'], 'integer'],
             [['catename'], 'string', 'max' => 200],
             [['description'], 'string', 'max' => 600],
