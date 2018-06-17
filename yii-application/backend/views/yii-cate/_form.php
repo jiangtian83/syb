@@ -9,7 +9,7 @@ use yii\bootstrap\ActiveForm;
 /* @var $model backend\models\YiiCate */
 /* @var $form yii\widgets\ActiveForm */
 
-$cates = YiiCate::find()->where(['tyoe' => 0]->select('id, catename')->all();
+$cates = YiiCate::find()->where(['tyoe' => 0])->select('id, catename')->all();
 $cateArr = [];
 foreach ($cates as $cate){
     $cateArr[$cate->id] = $cate -> catename;
