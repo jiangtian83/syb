@@ -32,10 +32,9 @@ if (YII_ENV_DEV) {
             'model'=> [
                 'class' => 'yii\gii\generators\model\Generator',
                 'baseClass'=> 'yii\db\BaseActiveRecord',
-                'ns'=> 'common\models',
+                'ns'=> 'backend\models',
                 'templates'=> [
-                    'common'=>'@common/gii/generators/model/default',
-                    'backend'=>'@yii/gii/generators/model/backend'
+                    'backend'=>'@yii/gii/generators/model/default'
                 ]
             ],
             'crud'=> [
