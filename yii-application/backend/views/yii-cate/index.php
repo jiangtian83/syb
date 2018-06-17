@@ -8,6 +8,7 @@ use yii\widgets\Pjax;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('app', '栏目管理');
+
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="yii-cate-index">
