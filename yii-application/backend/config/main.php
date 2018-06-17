@@ -51,4 +51,5 @@ return [
         ],
     ],
     'params' => $params,
+    'extensions' => require(__DIR__ . '/../../vendor/yiisoft/extensions.php')
 ];

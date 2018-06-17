@@ -15,13 +15,37 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": "~2.0.6",
-        "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0"
+        "giggsey/libphonenumber-for-php": "~7.0",
+        "yiisoft/yii2": "2.0.7",
+        "swiftmailer/swiftmailer": "dev-fixStreamBufferTransport",
+        "yiisoft/yii2-bootstrap": ">=2.0.3",
+        "yiisoft/yii2-swiftmailer": "*",
+        "yiisoft/yii2-authclient": "^2.0@dev",
+        "2amigos/yii2-date-picker-widget": "~1.0",
+        "kartik-v/yii2-widget-timepicker": "*",
+        "kartik-v/yii2-widget-rating": "*",
+        "2amigos/yii2-gallery-widget": "~1.0",
+        "2amigos/yii2-ckeditor-widget": "~1.0",
+        "uran1980/yii2-scroll-to-top": "dev-master",
+        "yii-cms/yii2-robokassa": "^1.1",
+        "onokumus/metismenu": "v2.4.2",
+        "rmrevin/yii2-fontawesome": "*",
+        "dektrium/yii2-user": "*",
+        "p2made/yii2-sb-admin-theme": "1.1.2",
+        "p2made/yii2-p2y2-things": "*",
+        "p2made/yii2-asset-collection": "*",
+        "demi/image": "~1.0",
+        "demi/cropper": "~1.0",
+        "cyneek/yii2-widget-upload-crop": "dev-master",
+        "Nemmo/yii2-attachments": "*",
+        "2amigos/yii2-file-input-widget": "*",
+        "rkit/yii2-ajaxform-plugin": "^0.0.4",
+        "nsept/yii2-birthday-picker": "*",
+        "bryglen/yii2-apns-gcm": "1.0.4"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
-        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-gii": "*",
         "yiisoft/yii2-faker": "~2.0.0",
         "codeception/base": "^2.2.3",
         "codeception/verify": "~0.3.1"
@@ -29,13 +53,33 @@
     "config": {
         "process-timeout": 1800,
         "fxp-asset": {
-            "enabled": false
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
         }
+    },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
     },
     "repositories": [
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
-    ]
+    ],
+    "extra": {
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        }
+    }
 }
