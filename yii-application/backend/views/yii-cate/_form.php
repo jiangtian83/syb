@@ -15,7 +15,9 @@ use backend\models\YiiCate;
         'options' => ['class' => 'form-horizontal']
     ]); ?>
 
-    <?= $form->field($model, 'catename')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'catename', [
+        'options' => ['style' => 'margin: 0', 'width' => '150px']
+    ])->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
 

@@ -7,7 +7,6 @@ use yii\helpers\Html;
 /* @var $model backend\models\YiiCate */
 
 $this->title = Yii::t('app', '新建栏目');
-$this->params['breadcrumbs'][] = ['label' => Yii::t('app', '栏目管理'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="yii-cate-create">
