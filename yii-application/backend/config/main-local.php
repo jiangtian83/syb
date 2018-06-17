@@ -20,24 +20,24 @@ if (YII_ENV_DEV) {
             'module'=> [
                 'class' => 'yii\gii\generators\module\Generator',
                 'templates'=> [
-                    'backend'=>'@common/gii/generators/module/default'
+                    'backend'=>'@yii/gii/generators/module/default'
                 ]
             ],
             'model'=> [
                 'class' => 'yii\gii\generators\model\Generator',
-                'baseClass'=> 'base\BaseActiveRecord',
+                'baseClass'=> 'yii\db\BaseActiveRecord',
                 'ns'=> 'common\models',
                 'templates'=> [
                     'common'=>'@common/gii/generators/model/default',
-                    'backend'=>'@common/gii/generators/model/backend'
+                    'backend'=>'@yii/gii/generators/model/backend'
                 ]
             ],
             'crud'=> [
                 'class' => 'yii\gii\generators\crud\Generator',
                 'templates'=> [
-                    'backend'=>'@common/gii/generators/crud/default'
+                    'backend'=>'@yii/gii/generators/crud/default'
                 ],
-                'baseControllerClass' => 'BaseBackendController',
+                'baseControllerClass' => 'backend\controllers\BaseBackendController',
                 'messageCategory'=> 'backend'
             ]
         ]
