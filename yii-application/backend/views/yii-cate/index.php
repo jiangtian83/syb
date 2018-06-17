@@ -21,6 +21,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'tableOptions' => ['style' => 'text-algin: center', 'class' => 'table table-striped table-bordered'],
+        'headerRowOptions' => ['style' => 'text-algin: center'],
         'columns' => [
             [
                 'class' => 'yii\grid\SerialColumn',
