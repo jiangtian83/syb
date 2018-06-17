@@ -12,7 +12,8 @@ use backend\models\YiiCate;
 <div class="yii-cate-form">
 
     <?php $form = ActiveForm::begin([
-        'options' => ['class' => 'form-horizontal']
+        'options' => ['class' => 'form-horizontal'],
+        'layout' => 'horizontal'
     ]); ?>
 
     <?= $form->field($model, 'catename', [
@@ -37,7 +38,9 @@ use backend\models\YiiCate;
         'options' => ['style' => 'margin: 0; width: 300px']
     ])->textInput(['value' => mt_rand(50, 500)]) ?>
 
-    <?= $form->field($model, 'creator')->textInput(['maxlength' => true, 'value' => Yii::$app->user->identity->user]) ?>
+    <?= $form->field($model, 'creator', [
+        'options' => ['style' => 'margin: 0; width: 300px']
+    ])->textInput(['maxlength' => true, 'value' => Yii::$app->user->identity->user]) ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', $model->isNewRecord ? '新建' : '编辑'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
