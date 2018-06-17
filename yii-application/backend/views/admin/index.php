@@ -93,17 +93,17 @@ use yii\widgets\ActiveForm;
                             {
                                 id:'7',
                                 text:'单页管理',
-                                href:test
+                                href:"/admin/login"
                             },
                             {
                                 id:'6',
                                 text:'文章管理',
-                                href:test
+                                href:"/admin/login"
                             },
                             {
                                 id:'5',
                                 text:'用户管理',
-                                href:test
+                                href:"/admin/login"
                             }
                         ]
                     }
