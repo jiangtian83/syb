@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php Pjax::begin(); ?>
     <p>
-        <?= Html::a(Yii::t('app', '新建栏目'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', '新建栏目'), ['create'], ['class' => 'btn btn-success pull-right']) ?>
     </p>
 
     <?= GridView::widget([
