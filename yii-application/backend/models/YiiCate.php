@@ -49,8 +49,8 @@ class YiiCate extends \yii\db\ActiveRecord
         return [
             [
                 'class' => TimestampBehavior::className(),
-                'createdAtAttribute' => 'create_time',
-                'updatedAtAttribute' => 'update_time',
+                'createdAtAttribute' => 'created_at',
+                'updatedAtAttribute' => 'updated_at',
                 'value' => new Expression('NOW()'),
             ],
         ];
