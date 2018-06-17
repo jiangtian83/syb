@@ -23,7 +23,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             [
                 'class' => 'yii\grid\SerialColumn',
-                'header' => '序号'
+                'header' => '序号',
+                'options' => ['style' => 'text-align: center']
             ],
 
             'catename',
@@ -31,12 +32,14 @@ $this->params['breadcrumbs'][] = $this->title;
             'views',
             [
                 'attribute' => 'created_at',
+                'options' => ['style' => 'text-align: center'],
                 'value' => function($m){
                    return date('Y-m-d H:i:s', $m->created_at);
                 }
              ],
             [
                 'attribute' => 'updated_at',
+                'options' => ['style' => 'text-align: center'],
                 'value' => function($m){
                     return date('Y-m-d H:i:s', $m->updated_at);
                 }
@@ -44,6 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
             [
                 'class' => 'yii\grid\ActionColumn',
+                'options' => ['style' => 'text-align: center'],
                 'header' => '操作'
             ],
         ],
