@@ -48,7 +48,7 @@ $css = <<<CSS
         text-align: center;
     }
 CSS;
-
+$this->registerCss($css);
 ?>
 </body>
 </html>
