@@ -3,20 +3,22 @@
 namespace backend\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "{{%yii_cate}}".
  *
  * @property int $id
- * @property string $catename æ ç›®å
- * @property string $description æè¿°
- * @property int $pid çˆ¶çº§id
- * @property int $deep å±‚çº§
- * @property int $type ç±»åž‹ï¼Œ0æ™®é€šæ ç›®ï¼Œ1é¡¹ç›®é¡µï¼Œ2æ™®é€šå•é¡µ
- * @property int $views æ ç›®ç‚¹å‡»é‡
- * @property string $creator å‘å¸ƒè€…
- * @property int $created_at åˆ›å»ºæ—¶é—´
- * @property int $updated_at æ›´æ–°æ—¶é—´
+ * @property string $catename 
+ * @property string $description
+ * @property int $pid
+ * @property int $deep
+ * @property int $type
+ * @property int $views
+ * @property string $creator
+ * @property int $created_at
+ * @property int $updated_at
  */
 class YiiCate extends \yii\db\ActiveRecord
 {
@@ -39,6 +41,18 @@ class YiiCate extends \yii\db\ActiveRecord
             [['catename'], 'string', 'max' => 200],
             [['description'], 'string', 'max' => 600],
             [['creator'], 'string', 'max' => 60],
+        ];
+    }
+
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'create_time',
+                'updatedAtAttribute' => 'update_time',
+                'value' => new Expression('NOW()'),
+            ],
         ];
     }
 
