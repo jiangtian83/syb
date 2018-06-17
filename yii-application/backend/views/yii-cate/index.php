@@ -14,8 +14,6 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="yii-cate-index">
 
     <?php Pjax::begin(); ?>
-    <?php  echo $this->render('_search', ['model' => $searchModel]); ?>
-
     <p>
         <?= Html::a(Yii::t('app', '新建栏目'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
