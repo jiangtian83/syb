@@ -28,15 +28,15 @@ use yii\bootstrap\ActiveForm;
     ]); ?>
 
     <?= $form->field($model, 'catename', [
-        'options' => ['style' => 'margin: 0; width: 300px']
+        'options' => ['style' => 'margin: 0; width: 50%']
     ])->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'description', [
-        'options' => ['style' => 'margin: 0; width: 300px']
+        'options' => ['style' => 'margin: 0; width: width: 50%; height: 150px; resize: none']
         ])->textarea(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'pid', [
-        'options' => ['style' => 'margin: 0; width: 300px']
+        'options' => ['style' => 'margin: 0; width: width: 50%']
     ])->dropDownList(YiiCate::findAll(['type' => 0]), [
             'options' => [
                 'value' => 0
@@ -46,11 +46,11 @@ use yii\bootstrap\ActiveForm;
     <?= $form->field($model, 'type')->label(false)->hiddenInput(['value' => 0]) ?>
 
     <?= $form->field($model, 'views', [
-        'options' => ['style' => 'margin: 0; width: 300px']
+        'options' => ['style' => 'margin: 0; width: width: 50%']
     ])->textInput(['value' => mt_rand(50, 500)]) ?>
 
     <?= $form->field($model, 'creator', [
-        'options' => ['style' => 'margin: 0; width: 300px']
+        'options' => ['style' => 'margin: 0; width: width: 50%']
     ])->textInput(['maxlength' => true, 'value' => Yii::$app->user->identity->user]) ?>
 
     <div class="form-group">
