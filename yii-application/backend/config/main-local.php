@@ -21,30 +21,6 @@ if (YII_ENV_DEV) {
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         'allowedIPs' =>  ['*'],
-        'generators'=> [
-            //重新定义gii model & crud的生成模板
-            'module'=> [
-                'class' => 'yii\gii\generators\module\Generator',
-                'templates'=> [
-                    'backend'=>'@yii/gii/generators/module/default'
-                ]
-            ],
-            'model'=> [
-                'class' => 'yii\gii\generators\model\Generator',
-                'ns'=> 'backend\models',
-                'templates'=> [
-                    'backend'=>'@yii/gii/generators/model/default'
-                ]
-            ],
-            'crud'=> [
-                'class' => 'yii\gii\generators\crud\Generator',
-                'templates'=> [
-                    'backend'=>'@yii/gii/generators/crud/default'
-                ],
-                'baseControllerClass' => 'backend\controllers\BaseBackendController',
-                'messageCategory'=> 'backend'
-            ]
-        ]
     ];
 }
 
