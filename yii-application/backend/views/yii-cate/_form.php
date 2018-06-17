@@ -30,7 +30,7 @@ use backend\models\YiiCate;
     <?= $form->field($model, 'creator')->textInput(['maxlength' => true, 'value' => Yii::$app->user->identity->nickname]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', '新建'), ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton(Yii::t('app', $model->isNewRecord ? '新建' : '编辑'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
