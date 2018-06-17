@@ -37,7 +37,7 @@ class YiiCate extends \yii\db\ActiveRecord
     {
         return [
             [['catename'], 'required'],
-            [['pid', 'deep', 'type', 'views', 'created_at', 'updated_at'], 'integer'],
+            [['pid', 'deep', 'type', 'views'], 'integer'],
             [['catename'], 'string', 'max' => 200],
             [['description'], 'string', 'max' => 600],
             [['creator'], 'string', 'max' => 60],
