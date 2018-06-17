@@ -80,28 +80,28 @@ use yii\widgets\ActiveForm;
         var config = [
             {
                 id:'1',
-                homePage : '9',
+                homePage : '1',
                 menu:[
                     {
                         text:'业务管理',
                         items:[
                             {
-                                id:'9',
+                                id:'1',
                                 text:'栏目管理',
                                 href:"/yii-cate/index"
                             },
                             {
-                                id:'8',
+                                id:'2',
                                 text:'单页管理',
                                 href:"/admin/test"
                             },
                             {
-                                id:'7',
+                                id:'3',
                                 text:'文章管理',
                                 href:"/admin/test"
                             },
                             {
-                                id:'6',
+                                id:'4',
                                 text:'用户管理',
                                 href:"/admin/test"
                             }
