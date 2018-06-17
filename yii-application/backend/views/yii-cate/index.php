@@ -49,6 +49,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => '操作'
             ],
         ],
+        'summary'=>false,
+        'pager'=>[
+            'firstPageLabel'=>'首页',
+            'prevPageLabel'=>'上一页',
+            'nextPageLabel'=>'下一页',
+            'lastPageLabel'=>'尾页'
+        ],
+        'emptyText'=>"暂未添加栏目",
+        'layout'=> "{items}\n{pager}",
     ]); ?>
     <?php Pjax::end(); ?>
 </div>
