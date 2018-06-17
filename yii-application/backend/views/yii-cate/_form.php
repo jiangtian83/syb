@@ -8,6 +8,12 @@ use yii\bootstrap\ActiveForm;
 /* @var $this yii\web\View */
 /* @var $model backend\models\YiiCate */
 /* @var $form yii\widgets\ActiveForm */
+
+$cates = YiiCate::find()->where(['tyoe' => 0]->select('id, catename')->all();
+$cateArr = [];
+foreach ($cates as $cate){
+    $cateArr[$cate->id] = $cate -> catename;
+}
 ?>
 
 <div class="yii-cate-form col-md-6 col-xs-8 col-lg-5 col-sm-12">
@@ -37,7 +43,7 @@ use yii\bootstrap\ActiveForm;
 
     <?= $form->field($model, 'pid', [
         'options' => ['style' => 'margin: 0;']
-    ])->label("父栏目名")->dropDownList(YiiCate::findAll(['type' => 0]), [
+    ])->label("父栏目名")->dropDownList($cateArr, [
             'options' => [
                 'value' => 0
             ]
