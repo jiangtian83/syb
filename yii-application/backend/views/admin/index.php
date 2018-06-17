@@ -86,22 +86,22 @@ use yii\widgets\ActiveForm;
                         text:'业务管理',
                         items:[
                             {
-                                id:'8',
+                                id:'9',
                                 text:'栏目管理',
                                 href:"/admin/login"
                             },
                             {
-                                id:'7',
+                                id:'8',
                                 text:'单页管理',
                                 href:"/admin/login"
                             },
                             {
-                                id:'6',
+                                id:'7',
                                 text:'文章管理',
                                 href:"/admin/login"
                             },
                             {
-                                id:'5',
+                                id:'6',
                                 text:'用户管理',
                                 href:"/admin/login"
                             }
