@@ -14,6 +14,12 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
+        'allowedIPs' =>  ['*']
+    ];
+
+    $config['bootstrap'][] = 'gii';
+    $config['modules']['gii'] = [
+        'class' => 'yii\gii\Module',
         'allowedIPs' =>  ['*'],
         'generators'=> [
             //重新定义gii model & crud的生成模板
@@ -41,12 +47,6 @@ if (YII_ENV_DEV) {
                 'messageCategory'=> 'backend'
             ]
         ]
-    ];
-
-    $config['bootstrap'][] = 'gii';
-    $config['modules']['gii'] = [
-        'class' => 'yii\gii\Module',
-        'allowedIPs' =>  ['*']
     ];
 }
 
