@@ -36,7 +36,7 @@ class AdminController extends Controller
                         'roles' => ['?'],
                     ],
                     [
-                        'actions' => ['logout','edit','add','del','index','users','thumb','upload','cutpic','follow','nofollow'],
+                        'actions' => ['logout','edit','add','del','index','users','thumb','upload','cutpic','follow','nofollow','test'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
