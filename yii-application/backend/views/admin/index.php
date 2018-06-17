@@ -86,11 +86,6 @@ use yii\widgets\ActiveForm;
                         text:'业务管理',
                         items:[
                             {
-                                id:'9',
-                                text:'查询业务',
-                                href:test
-                            },
-                            {
                                 id:'8',
                                 text:'栏目管理',
                                 href:test
