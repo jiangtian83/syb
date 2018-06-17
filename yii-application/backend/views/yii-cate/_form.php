@@ -54,7 +54,7 @@ use yii\bootstrap\ActiveForm;
     ])->textInput(['maxlength' => true, 'value' => Yii::$app->user->identity->user]) ?>
 
     <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', $model->isNewRecord ? '新建' : '编辑'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+        <?= Html::submitButton(Yii::t('app', $model->isNewRecord ? '新建' : '编辑'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary', 'style' => 'margin-left: 60px']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>
