@@ -14,10 +14,11 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="yii-cate-index">
 
     <?php Pjax::begin(); ?>
-    <p>
-        <?= Html::a(Yii::t('app', '新建栏目'), ['create'], ['class' => 'btn btn-success pull-right']) ?>
+    <p class="pull-right">
+        <?= Html::a(Yii::t('app', '新建栏目'), ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
+    <div class="clearfix"></div>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'tableOptions' => ['style' => 'text-align: center', 'class' => 'table table-striped table-bordered'],
