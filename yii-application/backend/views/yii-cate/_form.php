@@ -32,8 +32,8 @@ use yii\bootstrap\ActiveForm;
     ])->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'description', [
-        'options' => ['style' => 'margin: 0; height: 150px; resize: none']
-        ])->textarea(['maxlength' => true]) ?>
+        'options' => ['style' => 'margin: 0;']
+        ])->textarea(['maxlength' => true, 'style' => 'height: 150px;']) ?>
 
     <?= $form->field($model, 'pid', [
         'options' => ['style' => 'margin: 0;']
@@ -43,7 +43,7 @@ use yii\bootstrap\ActiveForm;
             ]
     ]) ?>
 
-    <?= $form->field($model, 'type')->label(false)->hiddenInput(['value' => 0]) ?>
+    <?= $form->field($model, 'type', ['style' => 'height: 0'])->label(false)->hiddenInput(['value' => 0]) ?>
 
     <?= $form->field($model, 'views', [
         'options' => ['style' => 'margin: 0;']
