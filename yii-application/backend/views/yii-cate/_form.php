@@ -32,7 +32,7 @@ use yii\bootstrap\ActiveForm;
     ])->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'description', [
-        'options' => ['style' => 'margin: 0; width: width: 50%; height: 150px; resize: none']
+        'options' => ['style' => 'margin: 0; width: 50%; height: 150px; resize: none']
         ])->textarea(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'pid', [
