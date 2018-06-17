@@ -14,6 +14,8 @@ use yii\filters\VerbFilter;
  */
 class YiiCateController extends Controller
 {
+    public $layout = "layout";
+
     /**
      * {@inheritdoc}
      */
