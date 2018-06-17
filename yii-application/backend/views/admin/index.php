@@ -92,7 +92,22 @@ use yii\widgets\ActiveForm;
                             },
                             {
                                 id:'8',
-                                text:'查询业务',
+                                text:'栏目管理',
+                                href:test
+                            },
+                            {
+                                id:'7',
+                                text:'单页管理',
+                                href:test
+                            },
+                            {
+                                id:'6',
+                                text:'文章管理',
+                                href:test
+                            },
+                            {
+                                id:'5',
+                                text:'用户管理',
                                 href:test
                             }
                         ]
