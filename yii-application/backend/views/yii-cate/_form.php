@@ -11,6 +11,7 @@ use yii\bootstrap\ActiveForm;
 
 $cates = YiiCate::find()->where(['type' => 0])->select('id, catename')->all();
 $cateArr = [];
+$cateArr[0] = "顶级栏目";
 foreach ($cates as $cate){
     $cateArr[$cate->id] = $cate -> catename;
 }
