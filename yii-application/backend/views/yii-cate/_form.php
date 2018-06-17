@@ -16,18 +16,26 @@ use backend\models\YiiCate;
     ]); ?>
 
     <?= $form->field($model, 'catename', [
-        'options' => ['style' => 'margin: 0', 'width' => '150px']
+        'options' => ['style' => 'margin: 0; width: 300px']
     ])->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'description', [
+        'options' => ['style' => 'margin: 0; width: 300px']
+        ])->textarea(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'pid')->dropDownList(YiiCate::findAll(['type' => 0])) ?>
-
-    <?= $form->field($model, 'deep')->textInput() ?>
+    <?= $form->field($model, 'pid', [
+        'options' => ['style' => 'margin: 0; width: 300px']
+    ])->dropDownList(YiiCate::findAll(['type' => 0]), [
+            'options' => [
+                'value' => 0
+            ]
+    ]) ?>
 
     <?= $form->field($model, 'type')->label(false)->hiddenInput(['value' => 0]) ?>
 
-    <?= $form->field($model, 'views')->textInput(['value' => mt_rand(50, 500)]) ?>
+    <?= $form->field($model, 'views', [
+        'options' => ['style' => 'margin: 0; width: 300px']
+    ])->textInput(['value' => mt_rand(50, 500)]) ?>
 
     <?= $form->field($model, 'creator')->textInput(['maxlength' => true, 'value' => Yii::$app->user->identity->user]) ?>
 
