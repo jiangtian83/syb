@@ -14,7 +14,33 @@ if (YII_ENV_DEV) {
     $config['bootstrap'][] = 'debug';
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
-        'allowedIPs' =>  ['*']
+        'allowedIPs' =>  ['*'],
+        'generators'=> [
+            //重新定义gii model & crud的生成模板
+            'module'=> [
+                'class' => 'yii\gii\generators\module\Generator',
+                'templates'=> [
+                    'backend'=>'@common/gii/generators/module/default'
+                ]
+            ],
+            'model'=> [
+                'class' => 'yii\gii\generators\model\Generator',
+                'baseClass'=> 'base\BaseActiveRecord',
+                'ns'=> 'common\models',
+                'templates'=> [
+                    'common'=>'@common/gii/generators/model/default',
+                    'backend'=>'@common/gii/generators/model/backend'
+                ]
+            ],
+            'crud'=> [
+                'class' => 'yii\gii\generators\crud\Generator',
+                'templates'=> [
+                    'backend'=>'@common/gii/generators/crud/default'
+                ],
+                'baseControllerClass' => 'BaseBackendController',
+                'messageCategory'=> 'backend'
+            ]
+        ]
     ];
 
     $config['bootstrap'][] = 'gii';
