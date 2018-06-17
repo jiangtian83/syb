@@ -31,7 +31,7 @@ AppAsset::register($this);
     <div class="container">
         <?= Breadcrumbs::widget([
             'homeLink' => [
-                'label' => Yii::t('yii', '栏目管理主页'),
+                'label' => Yii::t('yii', '栏目主页'),
                 'url' => '/yii-cate/index',
             ],
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
