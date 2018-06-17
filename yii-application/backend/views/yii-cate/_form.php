@@ -37,7 +37,7 @@ use yii\bootstrap\ActiveForm;
 
     <?= $form->field($model, 'pid', [
         'options' => ['style' => 'margin: 0; width: width: 50%']
-    ])->dropDownList(YiiCate::findAll(['type' => 0]), [
+    ])->label("父栏目名")->dropDownList(YiiCate::findAll(['type' => 0]), [
             'options' => [
                 'value' => 0
             ]
