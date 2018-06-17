@@ -88,7 +88,7 @@ use yii\widgets\ActiveForm;
                             {
                                 id:'9',
                                 text:'栏目管理',
-                                href:"/admin/test"
+                                href:"/yii-cate/index"
                             },
                             {
                                 id:'8',
