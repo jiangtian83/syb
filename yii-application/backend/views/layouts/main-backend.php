@@ -42,6 +42,14 @@ AppAsset::register($this);
 </div>
 
 <?php $this->endBody() ?>
+<?php
+$css = <<<CSS
+    table tr th{
+        text-align: center;
+    }
+CSS;
+
+?>
 </body>
 </html>
 <?php $this->endPage() ?>
