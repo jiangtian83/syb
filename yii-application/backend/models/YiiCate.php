@@ -49,15 +49,23 @@ class YiiCate extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'catename' => Yii::t('app', 'æ ç›®å'),
-            'description' => Yii::t('app', 'æè¿°'),
-            'pid' => Yii::t('app', 'çˆ¶çº§id'),
-            'deep' => Yii::t('app', 'å±‚çº§'),
-            'type' => Yii::t('app', 'ç±»åž‹ï¼Œ0æ™®é€šæ ç›®ï¼Œ1é¡¹ç›®é¡µï¼Œ2æ™®é€šå•é¡µ'),
-            'views' => Yii::t('app', 'æ ç›®ç‚¹å‡»é‡'),
-            'creator' => Yii::t('app', 'å‘å¸ƒè€…'),
-            'created_at' => Yii::t('app', 'åˆ›å»ºæ—¶é—´'),
-            'updated_at' => Yii::t('app', 'æ›´æ–°æ—¶é—´'),
+            'catename' => Yii::t('app', '栏目名称'),
+            'description' => Yii::t('app', '简介'),
+            'pid' => Yii::t('app', '父级id'),
+            'deep' => Yii::t('app', '层级'),
+            'type' => Yii::t('app', '类型'),
+            'views' => Yii::t('app', '点击量'),
+            'creator' => Yii::t('app', '创建人'),
+            'created_at' => Yii::t('app', '创建时间'),
+            'updated_at' => Yii::t('app', '更新时间'),
         ];
+    }
+
+    /**
+     * @param bool $refresh
+     * @return static
+     */
+    public static function instance($refresh = false){
+        return new static();
     }
 }

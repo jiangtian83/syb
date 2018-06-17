@@ -24,20 +24,31 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            [
+                'class' => 'yii\grid\SerialColumn',
+                'header' => '序号'
+            ],
 
-            'id',
             'catename',
             'description',
-            'pid',
-            'deep',
-            //'type',
-            //'views',
-            //'creator',
-            //'created_at',
-            //'updated_at',
+            'views',
+            [
+                'attribute' => 'created_at',
+                'value' => function($m){
+                   return date('Y-m-d H:i:s', $m->created_at);
+                }
+             ],
+            [
+                'attribute' => 'updated_at',
+                'value' => function($m){
+                    return date('Y-m-d H:i:s', $m->updated_at);
+                }
+            ],
 
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'header' => '操作'
+            ],
         ],
     ]); ?>
     <?php Pjax::end(); ?>
