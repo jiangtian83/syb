@@ -43,9 +43,11 @@ use yii\bootstrap\ActiveForm;
             ]
     ]) ?>
 
-    <?= $form->field($model, 'type', ['style' => 'height: 0'])->label(false)->hiddenInput(['value' => 0]) ?>
+    <?= $form->field($model, 'type')->label(false)->hiddenInput(['value' => 0]) ?>
 
-    <?= $form->field($model, 'views')->textInput(['value' => mt_rand(50, 500)]) ?>
+    <?= $form->field($model, 'views', [
+        'options' => ['style' => 'margin: 0']
+    ])->textInput(['value' => mt_rand(50, 500)]) ?>
 
     <?= $form->field($model, 'creator', [
         'options' => ['style' => 'margin: 0;']
