@@ -47,6 +47,21 @@ class YiiCateController extends Controller
     }
 
     /**
+     * Lists all YiiCate models.
+     * @return mixed
+     */
+    public function actionHome()
+    {
+        $searchModel = new YiiCateSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('home', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
      * Displays a single YiiCate model.
      * @param integer $id
      * @return mixed
