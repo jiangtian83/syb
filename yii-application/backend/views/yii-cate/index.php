@@ -59,7 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'class'=>'btn btn-success btn-sm',
                             'style'=>['margin-right' => '5px']
                         ];
-                        return Html::a('Update', $url, $options);
+                        return Html::a('编辑', $url, $options);
                     },
                     'delete'=> function ($url, $model, $key) {
                         $options = [
@@ -69,7 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'data-confirm' => Yii::t('yii', '您确定要删除该单页？'),
                             'class'=>'btn btn-danger btn-sm',
                         ];
-                        return Html::a('Delete', $url, $options);
+                        return Html::a('删除', $url, $options);
                     },
                 ],
             ],
