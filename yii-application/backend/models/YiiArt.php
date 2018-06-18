@@ -32,10 +32,11 @@ class YiiArt extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title', 'created_at', 'updated_at'], 'required'],
-            [['cateid', 'views', 'created_at', 'updated_at'], 'integer'],
+            [['title'], 'required'],
+            [['cateid', 'views'], 'integer'],
             [['title'], 'string', 'max' => 200],
             [['description'], 'string', 'max' => 600],
+            [['content'], 'string', 'max' => 6000],
             [['creator'], 'string', 'max' => 60],
         ];
     }
@@ -47,13 +48,14 @@ class YiiArt extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'title' => Yii::t('app', 'æ ç›®å'),
-            'description' => Yii::t('app', 'æè¿°'),
-            'cateid' => Yii::t('app', 'çˆ¶çº§æ ç›®å'),
-            'views' => Yii::t('app', 'é¡µé¢ç‚¹å‡»é‡'),
-            'creator' => Yii::t('app', 'å‘å¸ƒè€…'),
-            'created_at' => Yii::t('app', 'åˆ›å»ºæ—¶é—´'),
-            'updated_at' => Yii::t('app', 'æ›´æ–°æ—¶é—´'),
+            'title' => Yii::t('app', '文章标题'),
+            'description' => Yii::t('app', '文章描述'),
+            'content' => Yii::t('app', '文章内容'),
+            'cateid' => Yii::t('app', '所属栏目'),
+            'views' => Yii::t('app', '点击量'),
+            'creator' => Yii::t('app', '发布人'),
+            'created_at' => Yii::t('app', '发布时间'),
+            'updated_at' => Yii::t('app', '更新时间'),
         ];
     }
 }
