@@ -29,7 +29,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => '序号',
             ],
 
-            'catename',
+            [
+                'attribute' => 'catename',
+                'label' => '单页名称'
+            ],
             'description',
             'views',
             [
