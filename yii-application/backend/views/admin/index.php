@@ -98,7 +98,7 @@ use yii\widgets\ActiveForm;
                             {
                                 id:'3',
                                 text:'文章管理',
-                                href:"/yii-arc/index"
+                                href:"/yii-art/index"
                             },
                             {
                                 id:'4',
