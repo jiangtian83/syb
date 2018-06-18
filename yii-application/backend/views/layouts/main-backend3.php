@@ -32,7 +32,7 @@ AppAsset::register($this);
         <?= Breadcrumbs::widget([
             'homeLink' => [
                 'label' => Yii::t('yii', '文章主页'),
-                'url' => '/yii-arc/index',
+                'url' => '/yii-art/index',
             ],
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
