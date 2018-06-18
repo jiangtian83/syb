@@ -32,8 +32,8 @@ class YiiCustomer extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'tel', 'addr', 'reservationsid', 'created_at', 'updated_at'], 'required'],
-            [['reservationsid', 'created_at', 'updated_at'], 'integer'],
+            [['name', 'tel', 'addr', 'reservationsid'], 'required'],
+            [['reservationsid'], 'integer'],
             [['name'], 'string', 'max' => 200],
             [['tel'], 'string', 'max' => 12],
             [['addr', 'creator'], 'string', 'max' => 60],
@@ -47,13 +47,21 @@ class YiiCustomer extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'name' => Yii::t('app', 'å§“å'),
-            'tel' => Yii::t('app', 'è”ç³»æ–¹å¼'),
-            'addr' => Yii::t('app', 'è”ç³»åœ°å€'),
-            'reservationsid' => Yii::t('app', 'é¢„çº¦é¡¹ç›®id'),
-            'creator' => Yii::t('app', 'å‘å¸ƒè€…'),
-            'created_at' => Yii::t('app', 'åˆ›å»ºæ—¶é—´'),
-            'updated_at' => Yii::t('app', 'æ›´æ–°æ—¶é—´'),
+            'name' => Yii::t('app', '姓名'),
+            'tel' => Yii::t('app', '电话'),
+            'addr' => Yii::t('app', '地址'),
+            'reservationsid' => Yii::t('app', '预约项目'),
+            'creator' => Yii::t('app', '创建人'),
+            'created_at' => Yii::t('app', '创建时间'),
+            'updated_at' => Yii::t('app', '更新时间'),
         ];
+    }
+
+    /**
+     * @param bool $refresh
+     * @return static
+     */
+    public static function instance($refresh = false){
+        return new static();
     }
 }

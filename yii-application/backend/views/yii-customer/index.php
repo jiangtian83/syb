@@ -7,22 +7,15 @@ use yii\widgets\Pjax;
 /* @var $searchModel backend\models\YiiCustomerSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Yii Customers');
+$this->title = Yii::t('app', '客户管理');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="yii-customer-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
     <?php Pjax::begin(); ?>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <p>
-        <?= Html::a(Yii::t('app', 'Create Yii Customer'), ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
