@@ -16,7 +16,7 @@ foreach ($cates as $cate){
 }
 ?>
 
-<div class="yii-art-form col-md-6 col-xs-8 col-lg-5 col-sm-12">
+<div class="yii-art-form">
 
     <?php $form = ActiveForm::begin([
         'options' => ['class' => 'form-horizontal'],
@@ -39,13 +39,13 @@ foreach ($cates as $cate){
 
     <?= $form->field($model, 'description', [
         'options' => ['style' => 'margin: 0;']
-    ])->textarea(['maxlength' => true, 'style' => 'height: 150px;']) ?>
+    ])->textarea(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'content', [
         'options' => ['style' => 'margin: 0;']
-    ])->textarea(['maxlength' => true, 'style' => 'height: 150px;']) ?>
+    ])->textarea(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'content')->widget(CKEditor::className()) ?>
+    <?= $form->field($model, 'content')->widget(CKEditor::className()]) ?>
 
     <?= $form->field($model, 'cateid', [
         'options' => ['style' => 'margin: 0;']
@@ -69,4 +69,3 @@ foreach ($cates as $cate){
     <?php ActiveForm::end(); ?>
 
 </div>
-<div class="col-md-7 col-xs-4 col-lg-8"></div>
