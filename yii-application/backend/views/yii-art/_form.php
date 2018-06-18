@@ -11,7 +11,7 @@ use yii\bootstrap\ActiveForm;
 $cates = \backend\models\YiiCate::find()->where(['type' => 0])->select('id, catename')->all();
 $cateArr = [];
 foreach ($cates as $cate){
-    $cateArr[$cate->id] = $cate -> catename;
+    $cateArr[$cate->id] = $cate->catename;
 }
 ?>
 
@@ -46,7 +46,7 @@ foreach ($cates as $cate){
 
     <?= $form->field($model, 'cateid', [
         'options' => ['style' => 'margin: 0;']
-    ])->textInput($cateArr, [
+    ])->dropDownList($cateArr, [
         'options' => [
             'value' => 0
         ]
