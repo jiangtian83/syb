@@ -49,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => 'yii\grid\ActionColumn',
                 'header' => '操作',
                 'template' => '{update}{delete}',
-                'options' => ['style' => 'width: 100px'],
+                'options' => ['style' => 'width: 150px'],
                 'buttons'=>[
                     'update'=> function ($url, $model, $key) {
                         $options = [
@@ -66,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'aria-label' => Yii::t('app', 'Delete'),
                             'data-pjax' => '0',
                             'data-confirm' => Yii::t('yii', '您确定要删除该单页？'),
-                            'class'=>'btn btn-error btn-sm',
+                            'class'=>'btn btn-danger btn-sm',
                         ];
                         return Html::a('Delete', $url, $options);
                     },
