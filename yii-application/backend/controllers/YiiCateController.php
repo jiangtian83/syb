@@ -38,8 +38,8 @@ class YiiCateController extends Controller
     public function actionIndex()
     {
         $searchModel = new YiiCateSearch();
-        Yii::info(Yii::$app->request->queryParams);
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $data = array_merge(Yii::$app->request->queryParams, ['type' => 0]);
+        $dataProvider = $searchModel->search($data);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
