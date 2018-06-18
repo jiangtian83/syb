@@ -8,6 +8,7 @@ use backend\models\YiiCustomerSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * YiiCustomerController implements the CRUD actions for YiiCustomer model.
@@ -28,6 +29,13 @@ class YiiCustomerController extends Controller
                     'delete' => ['POST'],
                 ],
             ],
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    ['allow' => true, 'actions' => ['index', 'update', 'create'], 'roles' => ['@']],
+                    ['allow' => true, 'actions' => ['delete'], 'verbs' => ['POST'], 'roles' => ['@']],
+                    ]
+            ]
         ];
     }
 
