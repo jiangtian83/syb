@@ -38,8 +38,8 @@ class YiiCateController extends Controller
     public function actionIndex()
     {
         $searchModel = new YiiCateSearch();
-        $data = array_merge(Yii::$app->request->queryParams, ['type' => 0]);
-        $dataProvider = $searchModel->search($data);
+        $searchModel->type = 0;
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
@@ -54,9 +54,8 @@ class YiiCateController extends Controller
     public function actionHome()
     {
         $searchModel = new YiiCateSearch();
-
-        $data = array_merge(Yii::$app->request->queryParams, ['type' => 2]);
-        $dataProvider = $searchModel->search($data);
+        $searchModel->type = 2;
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('home', [
             'searchModel' => $searchModel,
