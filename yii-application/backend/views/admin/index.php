@@ -21,6 +21,7 @@ use yii\widgets\ActiveForm;
             ajaxPull();
             //轮询，实时更新消息数,10秒更新一次
             function ajaxPull(){
+                return;
                 setInterval(updateMsg,10000);
             }
 
