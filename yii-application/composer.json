@@ -42,6 +42,7 @@
         "rkit/yii2-ajaxform-plugin": "^0.0.4",
         "nsept/yii2-birthday-picker": "*",
         "bryglen/yii2-apns-gcm": "1.0.4"
+
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

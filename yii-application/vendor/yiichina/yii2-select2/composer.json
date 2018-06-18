@@ -1,0 +1,23 @@
+{
+    "name": "yiichina/yii2-select2",
+    "description": "Yii2 中使用 select2",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","select2"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "cuileon",
+            "email": "admin@yiichina.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "bower-asset/select2": "~4.0.1",
+        "bower-asset/select2-bootstrap-theme": "*@beta"
+    },
+    "autoload": {
+        "psr-4": {
+            "yiichina\\select2\\": ""
+        }
+    }
+}

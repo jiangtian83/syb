@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 //use yii\widgets\ActiveForm;
 use yii\bootstrap\ActiveForm;
+use yiichina\ckeditor\CKEditor;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\YiiArt */
@@ -43,6 +44,8 @@ foreach ($cates as $cate){
     <?= $form->field($model, 'content', [
         'options' => ['style' => 'margin: 0;']
     ])->textarea(['maxlength' => true, 'style' => 'height: 150px;']) ?>
+
+    <?= $form->field($model, 'content')->widget(CKEditor::className()) ?>
 
     <?= $form->field($model, 'cateid', [
         'options' => ['style' => 'margin: 0;']

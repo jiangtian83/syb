@@ -1,0 +1,22 @@
+{
+    "name": "yiichina/yii2-chart",
+    "description": "Yii2 中使用 Chart.js",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","chart"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "cuileon",
+            "email": "admin@yiichina.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": ">=2.0.6",
+        "bower-asset/Chart.js": ">=2.6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "yiichina\\chart\\": ""
+        }
+    }
+}
