@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="yii-cate-create">
 
-    <?= $this->render('_form', [
+    <?= $this->render('__form', [
         'model' => $model,
     ]) ?>
 
