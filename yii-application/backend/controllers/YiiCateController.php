@@ -54,7 +54,8 @@ class YiiCateController extends Controller
     public function actionHome()
     {
         $searchModel = new YiiCateSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $data = array_merge(Yii::$app->request->queryParams, ['type' => 0]);
+        $dataProvider = $searchModel->search($data);
 
         return $this->render('home', [
             'searchModel' => $searchModel,
