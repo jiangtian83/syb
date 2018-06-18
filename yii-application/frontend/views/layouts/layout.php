@@ -25,16 +25,6 @@ AppAsset::register($this);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href='https://fonts.googleapis.com/css?family=Maven+Pro:400,500,700,900' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-<!-- start-smoth-scrolling -->
-<script type="text/javascript">
-    jQuery(document).ready(function($) {
-        $(".scroll").click(function(event){
-            event.preventDefault();
-            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-		});
-    });
-</script>
-<!-- start-smoth-scrolling -->
 </head>
 
 <body>
@@ -148,8 +138,19 @@ AppAsset::register($this);
     </div>
 </div>
 <!-- //footer -->
-<!-- for bootstrap working -->
-<script src="js/bootstrap.js"></script>
-<!-- //for bootstrap working -->
+<?php
+$js = <<<JS
+    <!-- start-smoth-scrolling -->
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){
+            event.preventDefault();
+            $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+    });
+    <!-- start-smoth-scrolling -->
+JS;
+
+$this->registerJs($js);
+?>
 </body>
 </html>
