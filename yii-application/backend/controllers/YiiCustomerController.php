@@ -26,14 +26,14 @@ class YiiCustomerController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['post'],
                 ],
             ],
             'access' => [
                 'class' => AccessControl::className(),
                 'rules' => [
-                    ['allow' => true, 'actions' => ['index', 'update', 'create'], 'roles' => ['@']],
-                    ['allow' => true, 'actions' => ['delete'], 'verbs' => ['POST'], 'roles' => ['@']],
+                        ['allow' => true, 'actions' => ['index', 'update', 'create'], 'roles' => ['@']],
+                        ['allow' => true, 'actions' => ['delete'], 'verbs' => ['post'], 'roles' => ['@']],
                     ]
             ]
         ];
