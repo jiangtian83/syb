@@ -119,5 +119,6 @@ use yii\widgets\ActiveForm;
         });
     });
 </script>
+
 </body>
 </html>
