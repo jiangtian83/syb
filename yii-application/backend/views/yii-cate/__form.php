@@ -9,6 +9,7 @@ use yii\bootstrap\ActiveForm;
 /* @var $model backend\models\YiiCate */
 /* @var $form yii\widgets\ActiveForm */
 
+
 $cates = YiiCate::find()->where(['type' => 0])->select('id, catename')->all();
 $cateArr = [];
 $cateArr[0] = "顶级栏目";
