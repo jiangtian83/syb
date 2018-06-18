@@ -36,7 +36,7 @@ foreach ($cates as $cate){
 
     <?= $form->field($model, 'catename', [
         'options' => ['style' => 'margin: 0;']
-    ])->textInput(['maxlength' => true]) ?>
+    ])->label("单页名称")->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'description', [
         'options' => ['style' => 'margin: 0;']
