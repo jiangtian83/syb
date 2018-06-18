@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php Pjax::begin(); ?>
     <p class="pull-right">
-        <?= Html::a(Yii::t('app', '新建单页'), ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a(Yii::t('app', '新建单页'), ['page'], ['class' => 'btn btn-success']) ?>
     </p>
 
     <div class="clearfix"></div>
@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'header' => '操作',
                 'template' => '{update}{delete}',
                 'buttons'=>[
-                    'update'=> function ($url, $model, $key) {
+                    'edit'=> function ($url, $model, $key) {
                         $options = [
                             'title' => Yii::t('app', '编辑'),
                             'aria-label' => Yii::t('app', '编辑'),
