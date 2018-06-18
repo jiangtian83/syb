@@ -57,6 +57,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'aria-label' => Yii::t('app', 'Update'),
                             'data-pjax' => '0',
                             'class'=>'btn btn-success btn-sm',
+                            'style'=>['margin-right' => '5px']
                         ];
                         return Html::a('Update', $url, $options);
                     },
