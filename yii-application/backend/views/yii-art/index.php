@@ -84,6 +84,15 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
             ],
         ],
+        'summary'=>false,
+        'pager'=>[
+            'firstPageLabel'=>'首页',
+            'prevPageLabel'=>'上一页',
+            'nextPageLabel'=>'下一页',
+            'lastPageLabel'=>'尾页'
+        ],
+        'emptyText'=>"暂未添加文章",
+        'layout'=> "{items}\n{pager}",
     ]); ?>
     <?php Pjax::end(); ?>
 </div>
