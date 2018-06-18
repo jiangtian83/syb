@@ -49,32 +49,24 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => 'yii\grid\ActionColumn',
                 'header' => '操作',
                 'template' => '{update}{delete}',
+                'options' => ['style' => 'width: 100px'],
                 'buttons'=>[
-                    'view'=> function ($url, $model, $key) {
-                        $options = [
-                            'title' => Yii::t('app', 'View'),
-                            'aria-label' => Yii::t('app', 'View'),
-                            'data-pjax' => '0',
-                            'class'=>'btn btn-circle btn-icon-only blue',
-                        ];
-                        return Html::a('View', $url, $options);
-                    },
                     'update'=> function ($url, $model, $key) {
                         $options = [
-                            'title' => Yii::t('app', 'Update'),
+                            'title' => Yii::t('app', '编辑'),
                             'aria-label' => Yii::t('app', 'Update'),
                             'data-pjax' => '0',
-                            'class'=>'btn btn-circle btn-icon-only green',
+                            'class'=>'btn btn-success btn-sm',
                         ];
                         return Html::a('Update', $url, $options);
                     },
                     'delete'=> function ($url, $model, $key) {
                         $options = [
-                            'title' => Yii::t('app', 'Delete'),
+                            'title' => Yii::t('app', '删除'),
                             'aria-label' => Yii::t('app', 'Delete'),
                             'data-pjax' => '0',
                             'data-confirm' => Yii::t('yii', '您确定要删除该单页？'),
-                            'class'=>'btn btn-circle btn-icon-only red',
+                            'class'=>'btn btn-error btn-sm',
                         ];
                         return Html::a('Delete', $url, $options);
                     },
