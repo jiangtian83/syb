@@ -51,7 +51,7 @@ foreach ($cates as $cate){
             ]
     ]) ?>
 
-    <?= $form->field($model, 'type')->label(false)->hiddenInput(['value' => 2]) ?>
+    <?= $form->field($model, 'type')->label('单页类型')->radioList(['2' => '普通单页', '1' => '公司项目'], ['value' => 2]) ?>
 
     <?= $form->field($model, 'views', [
         'options' => ['style' => 'margin: 0']
