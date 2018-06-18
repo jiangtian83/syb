@@ -52,19 +52,9 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'class' => 'yii\grid\ActionColumn',
                 'header' => '操作',
-                'template' => '{update}{delete}',
-                'options' => ['style' => 'width: 150px'],
+                'template' => '{delete}',
+                'options' => ['style' => 'width: 80px'],
                 'buttons'=>[
-                    'update'=> function ($url, $model, $key) {
-                        $options = [
-                            'title' => Yii::t('app', '编辑'),
-                            'aria-label' => Yii::t('app', '编辑'),
-                            'data-pjax' => '0',
-                            'class'=>'btn btn-success btn-sm',
-                            'style'=>['margin-right' => '5px']
-                        ];
-                        return Html::a('编辑', $url, $options);
-                    },
                     'delete'=> function ($url, $model, $key) {
                         $options = [
                             'title' => Yii::t('app', '删除'),
