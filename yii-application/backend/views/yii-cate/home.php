@@ -48,7 +48,37 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'class' => 'yii\grid\ActionColumn',
                 'header' => '操作',
-                'template' => '{update}{delete}'
+                'template' => '{update}{delete}',
+                'buttons'=>[
+                    'view'=> function ($url, $model, $key) {
+                        $options = [
+                            'title' => Yii::t('app', 'View'),
+                            'aria-label' => Yii::t('app', 'View'),
+                            'data-pjax' => '0',
+                            'class'=>'btn btn-circle btn-icon-only blue',
+                        ];
+                        return Html::a('View', $url, $options);
+                    },
+                    'update'=> function ($url, $model, $key) {
+                        $options = [
+                            'title' => Yii::t('app', 'Update'),
+                            'aria-label' => Yii::t('app', 'Update'),
+                            'data-pjax' => '0',
+                            'class'=>'btn btn-circle btn-icon-only green',
+                        ];
+                        return Html::a('Update', $url, $options);
+                    },
+                    'delete'=> function ($url, $model, $key) {
+                        $options = [
+                            'title' => Yii::t('app', 'Delete'),
+                            'aria-label' => Yii::t('app', 'Delete'),
+                            'data-pjax' => '0',
+                            'data-confirm' => Yii::t('yii', '您确定要删除该单页？'),
+                            'class'=>'btn btn-circle btn-icon-only red',
+                        ];
+                        return Html::a('Delete', $url, $options);
+                    },
+                ],
             ],
         ],
         'summary'=>false,
