@@ -98,12 +98,12 @@ use yii\widgets\ActiveForm;
                             {
                                 id:'3',
                                 text:'文章管理',
-                                href:"/admin/test"
+                                href:"/yii-arc/index"
                             },
                             {
                                 id:'4',
                                 text:'用户管理',
-                                href:"/admin/test"
+                                href:"/yii-customer/index"
                             }
                         ]
                     }
