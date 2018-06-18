@@ -32,7 +32,7 @@ class YiiCustomerController extends Controller
             'access' => [
                 'class' => AccessControl::className(),
                 'rules' => [
-                        ['allow' => true, 'actions' => ['index', 'update', 'create'], 'roles' => ['@']],
+                        ['allow' => true, 'actions' => ['index', 'update', 'create', 'delete'], 'roles' => ['@']],
                         ['allow' => true, 'actions' => ['delete'], 'verbs' => ['post'], 'roles' => ['@']],
                     ]
             ]
