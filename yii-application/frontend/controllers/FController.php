@@ -18,6 +18,8 @@ use frontend\models\ContactForm;
  */
 class FController extends Controller
 {
+    public $layout = "layout";
+
     /**
      * {@inheritdoc}
      */
