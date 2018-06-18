@@ -51,9 +51,9 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'class' => 'yii\grid\ActionColumn',
                 'header' => '操作',
-                'template' => '{update}{delete}',
+                'template' => '{change}{delete}',
                 'buttons'=>[
-                    'edit'=> function ($url, $model, $key) {
+                    'change'=> function ($url, $model, $key) {
                         $options = [
                             'title' => Yii::t('app', '编辑'),
                             'aria-label' => Yii::t('app', '编辑'),
