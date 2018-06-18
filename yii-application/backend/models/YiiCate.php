@@ -63,7 +63,7 @@ class YiiCate extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'catename' => Yii::t('app', '栏目/单页名称'),
+            'catename' => Yii::t('app', '栏目名称'),
             'description' => Yii::t('app', '简介'),
             'pid' => Yii::t('app', '父级id'),
             'deep' => Yii::t('app', '层级'),
