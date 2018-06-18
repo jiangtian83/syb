@@ -3,6 +3,8 @@
 namespace backend\models;
 
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "{{%yii_art}}".
@@ -41,6 +43,18 @@ class YiiArt extends \yii\db\ActiveRecord
         ];
     }
 
+    public function behaviors()
+    {
+        return [
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'created_at',
+                'updatedAtAttribute' => 'updated_at',
+                'value' => new Expression('unix_timestamp()'),
+            ],
+        ];
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -57,5 +71,13 @@ class YiiArt extends \yii\db\ActiveRecord
             'created_at' => Yii::t('app', '发布时间'),
             'updated_at' => Yii::t('app', '更新时间'),
         ];
+    }
+
+    /**
+     * @param bool $refresh
+     * @return static
+     */
+    public static function instance($refresh = false){
+        return new static();
     }
 }
