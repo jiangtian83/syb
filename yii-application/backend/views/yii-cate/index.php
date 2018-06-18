@@ -66,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'title' => Yii::t('app', '删除'),
                             'aria-label' => Yii::t('app', '删除'),
                             'data-pjax' => '0',
-                            'data-confirm' => Yii::t('yii', '您确定要删除该单页？'),
+                            'data-confirm' => Yii::t('yii', '您确定要删除该栏目？'),
                             'class'=>'btn btn-danger btn-sm',
                         ];
                         return Html::a('删除', $url, $options);
