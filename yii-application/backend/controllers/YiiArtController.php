@@ -14,6 +14,8 @@ use yii\filters\VerbFilter;
  */
 class YiiArtController extends Controller
 {
+    public $layout = "main-backend3";
+
     /**
      * {@inheritdoc}
      */
