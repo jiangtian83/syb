@@ -104,7 +104,7 @@ class YiiCateController extends Controller
         $model = new YiiCate();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            return $this->redirect(['home']);
         }
 
         return $this->render('page', [
@@ -144,7 +144,7 @@ class YiiCateController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            return $this->redirect(['home']);
         }
 
         return $this->render('edit', [
