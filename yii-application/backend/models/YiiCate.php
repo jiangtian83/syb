@@ -36,7 +36,7 @@ class YiiCate extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['catename'], 'required'],
+            [['catename'], 'required', 'message' => '栏目名称不能为空！'],
             [['pid', 'deep', 'type', 'views'], 'integer'],
             [['catename'], 'string', 'max' => 200],
             [['description'], 'string', 'max' => 600],

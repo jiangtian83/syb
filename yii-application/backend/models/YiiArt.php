@@ -34,7 +34,7 @@ class YiiArt extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title'], 'required'],
+            [['title'], 'required', 'message' => '文章标题不能为空！'],
             [['cateid', 'views'], 'integer'],
             [['title'], 'string', 'max' => 200],
             [['description'], 'string', 'max' => 600],
