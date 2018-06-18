@@ -55,6 +55,7 @@ class YiiCateController extends Controller
     {
         $searchModel = new YiiCateSearch();
         $data = array_merge(Yii::$app->request->queryParams, ['type' => 0]);
+        return $data;
         $dataProvider = $searchModel->search($data);
 
         return $this->render('home', [
