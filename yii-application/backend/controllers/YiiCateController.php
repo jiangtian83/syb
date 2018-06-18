@@ -69,10 +69,10 @@ class YiiCateController extends Controller
         $model = new YiiCate();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            return $this->redirect([$model->type == 0 || $model->type == 2 ? 'index' : 'home']);
         }
 
-        return $this->render('create', [
+        return $this->render($model->type == 0 || $model->type == 2 ? 'create' : 'page', [
             'model' => $model,
         ]);
     }
@@ -89,10 +89,10 @@ class YiiCateController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['index']);
+            return $this->redirect([$model->type == 0 || $model->type == 2 ? 'index' : 'home']);
         }
 
-        return $this->render('update', [
+        return $this->render($model->type == 0 || $model->type == 2 ? 'update' : 'edit', [
             'model' => $model,
         ]);
     }
