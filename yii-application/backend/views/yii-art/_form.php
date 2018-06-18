@@ -45,7 +45,7 @@ foreach ($cates as $cate){
         'options' => ['style' => 'margin: 0;']
     ])->textarea(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'content')->widget(CKEditor::className()]) ?>
+    <?= $form->field($model, 'content')->widget(CKEditor::className()) ?>
 
     <?= $form->field($model, 'cateid', [
         'options' => ['style' => 'margin: 0;']
