@@ -43,7 +43,7 @@ AppAsset::register($this);
             </ul>
         </div>
         <div class="w3ls_logo">
-            <h1><a href="index.html">Barter</a></h1>
+            <h1><a href="/">创业经纪人</a></h1>
         </div>
         <div class="header_right">
         <nav class="navbar navbar-default">

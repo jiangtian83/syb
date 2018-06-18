@@ -12,7 +12,7 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/fiexslider.css',
+        'css/flexslider.css',
         'css/smoothbox.css',
         'css/style.css'
     ];
