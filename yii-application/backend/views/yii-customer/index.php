@@ -17,6 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
+        'tableOptions' => ['style' => 'text-align: center', 'class' => 'table table-striped table-bordered'],
         'columns' => [
             [
                 'class' => 'yii\grid\SerialColumn',
@@ -69,7 +70,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'title' => Yii::t('app', '删除'),
                             'aria-label' => Yii::t('app', '删除'),
                             'data-pjax' => '0',
-                            'data-confirm' => Yii::t('yii', '您确定要删除该栏目？'),
+                            'data-confirm' => Yii::t('yii', '您确定要删除该客户记录？'),
                             'class'=>'btn btn-danger btn-sm',
                         ];
                         return Html::a('删除', $url, $options);
