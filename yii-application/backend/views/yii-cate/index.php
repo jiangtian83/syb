@@ -54,7 +54,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'update'=> function ($url, $model, $key) {
                         $options = [
                             'title' => Yii::t('app', '编辑'),
-                            'aria-label' => Yii::t('app', 'Update'),
+                            'aria-label' => Yii::t('app', '编辑'),
                             'data-pjax' => '0',
                             'class'=>'btn btn-success btn-sm',
                             'style'=>['margin-right' => '5px']
@@ -64,7 +64,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     'delete'=> function ($url, $model, $key) {
                         $options = [
                             'title' => Yii::t('app', '删除'),
-                            'aria-label' => Yii::t('app', 'Delete'),
+                            'aria-label' => Yii::t('app', '删除'),
                             'data-pjax' => '0',
                             'data-confirm' => Yii::t('yii', '您确定要删除该单页？'),
                             'class'=>'btn btn-danger btn-sm',
