@@ -44,7 +44,6 @@ class YiiCateController extends Controller
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'home' => ['栏目主页', '/yii-cate/index']
         ]);
     }
 
@@ -61,7 +60,6 @@ class YiiCateController extends Controller
         return $this->render('home', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'home' => ['单页主页', '/yii-cate/home']
         ]);
     }
 
@@ -103,6 +101,7 @@ class YiiCateController extends Controller
      */
     public function actionPage()
     {
+        $this->layout = "main-backend2";
         $model = new YiiCate();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -143,6 +142,7 @@ class YiiCateController extends Controller
      */
     public function actionEdit($id)
     {
+        $this->layout = "main-backend2";
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
