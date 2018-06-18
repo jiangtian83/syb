@@ -35,7 +35,6 @@ $this->params['breadcrumbs'][] = $this->title;
                     return !empty($model) ? $model->catename : "";
                 }
             ],
-            'creator',
             [
                 'attribute' => 'created_at',
                 'value' => function($m){

@@ -38,7 +38,7 @@ class YiiCustomer extends \yii\db\ActiveRecord
             [['reservationsid'], 'integer'],
             [['name'], 'string', 'max' => 200],
             [['tel'], 'string', 'max' => 12],
-            [['addr', 'creator'], 'string', 'max' => 60],
+            [['addr'], 'string', 'max' => 60],
         ];
     }
 
@@ -53,7 +53,6 @@ class YiiCustomer extends \yii\db\ActiveRecord
             'tel' => Yii::t('app', '电话'),
             'addr' => Yii::t('app', '地址'),
             'reservationsid' => Yii::t('app', '预约项目'),
-            'creator' => Yii::t('app', '创建人'),
             'created_at' => Yii::t('app', '创建时间'),
             'updated_at' => Yii::t('app', '更新时间'),
         ];

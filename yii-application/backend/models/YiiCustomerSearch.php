@@ -19,7 +19,7 @@ class YiiCustomerSearch extends YiiCustomer
     {
         return [
             [['id', 'reservationsid', 'created_at', 'updated_at'], 'integer'],
-            [['name', 'tel', 'addr', 'creator'], 'safe'],
+            [['name', 'tel', 'addr'], 'safe'],
         ];
     }
 
@@ -67,8 +67,7 @@ class YiiCustomerSearch extends YiiCustomer
 
         $query->andFilterWhere(['like', 'name', $this->name])
             ->andFilterWhere(['like', 'tel', $this->tel])
-            ->andFilterWhere(['like', 'addr', $this->addr])
-            ->andFilterWhere(['like', 'creator', $this->creator]);
+            ->andFilterWhere(['like', 'addr', $this->addr]);
 
         return $dataProvider;
     }
