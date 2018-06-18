@@ -53,6 +53,7 @@ class YiiCateController extends Controller
      */
     public function actionHome()
     {
+        $this->layout = "main-backend2";
         $searchModel = new YiiCateSearch();
         $searchModel->type = 2;
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
