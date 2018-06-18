@@ -88,12 +88,12 @@ use yii\widgets\ActiveForm;
                             {
                                 id:'1',
                                 text:'栏目管理',
-                                href:"/yii-cate/index?type=0"
+                                href:"/yii-cate/index"
                             },
                             {
                                 id:'2',
                                 text:'单页管理',
-                                href:"/yii-cate/index?type=2"
+                                href:"/yii-cate/home"
                             },
                             {
                                 id:'3',
