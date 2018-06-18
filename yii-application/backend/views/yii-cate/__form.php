@@ -52,9 +52,7 @@ foreach ($cates as $cate){
     ]) ?>
 
     <?= $form->field($model, 'type', [
-        'options' => [
-            'style' => 'display:inline'
-        ]
+        'template' => '{label}<div class="col-md-9 md-radio-inline">{input}</div>{hint}{error}',
     ])->label('单页类型')->radioList(['2' => '普通单页', '1' => '公司项目'], ['value' => 2]) ?>
 
     <?= $form->field($model, 'views', [
