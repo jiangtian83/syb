@@ -11,8 +11,11 @@ use frontend\assets\AppAsset;
 use yii\helpers\Html;
 use yii\widgets\Breadcrumbs;
 use yii\bootstrap\Alert;
+use backend\models\YiiCate;
 
 AppAsset::register($this);
+$nav = YiiCate::findBySql('select id,catename from :tbname where type=0 or type=1;', [':tbname' => 'yii_cate']);
+var_dump($nav);
 
 ?>
 <?php $this->beginPage() ?>
