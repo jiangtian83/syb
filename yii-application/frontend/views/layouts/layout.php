@@ -14,7 +14,7 @@ use yii\bootstrap\Alert;
 use backend\models\YiiCate;
 
 AppAsset::register($this);
-$nav = YiiCate::findBySql('select id,catename from :tbname where type=0 or type=1;', [':tbname' => 'yii_cate'])->all();
+$nav = YiiCate::findBySql('select id,catename from yii_cate where type=:t1 or type=:t2;', [':t1' => 0, ':t2' => 1])->all();
 var_dump($nav);
 
 ?>
