@@ -73,7 +73,8 @@ class YiiCateSearch extends YiiCate
 
         $query->andFilterWhere(['like', 'catename', $this->catename])
             ->andFilterWhere(['like', 'description', $this->description])
-            ->andFilterWhere(['like', 'creator', $this->creator]);
+            ->andFilterWhere(['like', 'creator', $this->creator])
+            ->orFilterWhere(['type' => $this->type2]);
 
         return $dataProvider;
     }
