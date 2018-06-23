@@ -33,15 +33,6 @@ AppAsset::register($this);
 <!-- header -->
 <div class="header" id="ban">
     <div class="container">
-        <div class="w3l_social_icons">
-            <ul>
-                <li><a href="#" class="facebook"></a></li>
-                <li><a href="#" class="twitter"></a></li>
-                <li><a href="#" class="google_plus"></a></li>
-                <li><a href="#" class="pinterest"></a></li>
-                <li><a href="#" class="instagram"></a></li>
-            </ul>
-        </div>
         <div class="w3ls_logo">
             <h1><a href="/">创业经纪人</a></h1>
         </div>
